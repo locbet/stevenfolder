@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="DocumentSpider.Html._Tag" Collapsed="true">
+    <Position X="6" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAIAQAAAAAAAAAA=</HashCode>
+      <FileName>Html\_Tag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocumentSpider.Html.TagForm">
+    <Position X="1" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Html\TagForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocumentSpider.Html.TagHtml">
+    <Position X="8.25" Y="3.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Html\TagHtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocumentSpider.Html.TagInput">
+    <Position X="0.5" Y="2.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Html\TagInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocumentSpider.Html.TagSelect">
+    <Position X="3" Y="7.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAACAAACAAAAAAAAAABAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Html\TagSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocumentSpider.Html.TagTable">
+    <Position X="13.25" Y="2.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAEQAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Html\TagTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocumentSpider.Html.TagTextArea">
+    <Position X="4.5" Y="5.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Html\TagTextArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocumentSpider.WebSpider" Collapsed="true">
+    <Position X="14.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABA=</HashCode>
+      <FileName>WebSpider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="SimSun" Size="9" />
+</ClassDiagram>

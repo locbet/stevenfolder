@@ -1,0 +1,410 @@
+﻿<HTML>
+<HEAD>
+    <TITLE></TITLE>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <LINK rel="stylesheet" href="PortalManager.css" type="text/css"></LINK>
+    <STYLE>
+    </STYLE>
+    <SCRIPT src="javascript/public.js" language="JavaScript">
+    </SCRIPT>
+  </HEAD>
+  <BODY onload="buildDatePanel('divDatePicker');buildCalculatorPanel('divCalculator');DocLoad();">
+    <DIV class="DatePane" ID="divDatePicker">
+       <IFRAME NAME="frameDatePicker" WIDTH="360" HEIGHT="210" SRC="DatePanel.htm" NORESIZE SCROLLING="no" FRAMEBORDER="no" BORDER="0" FRAMESPACING="0"></IFRAME>
+       <SCRIPT EVENT="onclick()" FOR="document">if(divDatePicker!=null)divDatePicker.style.visibility="hidden";</SCRIPT>
+    </DIV>
+<DIV class="PortalHeader">
+  <TABLE width="100%" cellpadding="3">
+  <TBODY>
+  <TR>
+  <TD bgcolor="black" nowrap valign="top" width="10%" rowspan="2" align="center">
+  <SCRIPT language="JavaScript"> 
+  var dn;
+  c1=new Image(); c1.src="images/clock/c1.gif";
+  c2=new Image(); c2.src="images/clock/c2.gif";
+  c3=new Image(); c3.src="images/clock/c3.gif";
+  c4=new Image(); c4.src="images/clock/c4.gif";
+  c5=new Image(); c5.src="images/clock/c5.gif";
+  c6=new Image(); c6.src="images/clock/c6.gif";
+  c7=new Image(); c7.src="images/clock/c7.gif";
+  c8=new Image(); c8.src="images/clock/c8.gif";
+  c9=new Image(); c9.src="images/clock/c9.gif";
+  c10=new Image(); c10.src="images/clock/c10.gif";
+  c0=new Image(); c0.src="images/clock/c0.gif";
+  cb=new Image();  cb.src="images/clock/cb.gif";
+  cam=new Image(); cam.src="images/clock/cam.gif";
+  cpm=new Image(); cpm.src="images/clock/cpm.gif";
+  cj=new Image(); cj.src="images/clock/cj.gif";
+  function extract(yy,mm,dd,h,m,s,type){
+  if (!document.images) return;
+  document.images.y0.src = eval("c"+Math.floor(yy/1000)+".src");
+  document.images.y1.src = eval("c"+Math.floor(yy/100)%10+".src");
+  document.images.y2.src = eval("c"+Math.floor(yy/10)%100+".src");
+  document.images.y3.src = eval("c"+(yy%1000)+".src");
+  document.images.y5.src = eval("c"+Math.floor(mm/10)+".src");
+  document.images.y6.src = eval("c"+(mm%10)+".src");
+  document.images.y8.src = eval("c"+Math.floor(dd/10)+".src");
+  document.images.y9.src = eval("c"+(dd%10)+".src");
+  if (h <= 9) {
+    document.images.a.src = cb.src;
+    document.images.b.src = eval("c"+h+".src");
+  }else{
+     document.images.a.src = eval("c"+Math.floor(h/10)+".src");
+     document.images.b.src = eval("c"+(h%10)+".src");
+  }
+  if (m <= 9) {
+    document.images.d.src = c0.src;
+    document.images.e.src = eval("c"+m+".src");
+  }else{
+    document.images.d.src = eval("c"+Math.floor(m/10)+".src");
+    document.images.e.src = eval("c"+(m%10)+".src");
+  }
+  if (s <= 9) {
+    document.g.src = c0.src;
+    document.images.h.src = eval("c"+s+".src");
+  }else{
+    document.images.g.src = eval("c"+Math.floor(s/10)+".src");
+    document.images.h.src = eval("c"+(s%10)+".src");
+  }
+  if (dn == "AM") document.j.src = cam.src;
+  else document.images.j.src = cpm.src;
+}
+  function show3(){
+  if(!document.images) return;
+  var Digital = new Date();
+  var hours = Digital.getHours();
+  var minutes = Digital.getMinutes();
+  var seconds = Digital.getSeconds();
+  var yyyy = Digital.getFullYear();
+  var mm = Digital.getMonth()+1;
+  var dd = Digital.getDate();
+  dn = "AM";
+  if ((hours >= 12) && (minutes >= 1) || (hours >= 13)) {
+    dn = "PM";
+    hours = hours-12;
+  }
+  if(hours == 0) hours = 12;
+  extract(yyyy, mm, dd, hours, minutes, seconds, dn);
+  setTimeout("show3()", 1000);
+}
+</SCRIPT>
+  <DIV style="background:black;" class="clock">
+  <img height="18" src="images/clock/c2.gif" width="14" name="y0">
+  <img height="18" src="images/clock/c0.gif" width="14" name="y1">
+  <img height="18" src="images/clock/c0.gif" width="14" name="y2">
+  <img height="18" src="images/clock/c9.gif" width="14" name="y3">
+  <img height="20" src="images/clock/cj.gif" width="15">
+  <img height="18" src="images/clock/c0.gif" width="14" name="y5">
+  <img height="18" src="images/clock/c9.gif" width="14" name="y6">
+  <img height="20" src="images/clock/cj.gif" width="15">
+  <img height="18" src="images/clock/c1.gif" width="14" name="y8">
+  <img height="18" src="images/clock/c0.gif" width="14" name="y9">
+</DIV>
+  <SPAN style="background:black;" class="clock">
+  <img height="21" src="images/clock/cb.gif" width="16" name="a">
+  <img height=21 src="images/clock/cb.gif" width="16" name="b">
+  <img height=21 src="images/clock/colon.gif" width="9" name="c">
+  <img height=21 src="images/clock/cb.gif" width="16" name="d">
+  <img height=21 src="images/clock/cb.gif" width="16" name="e">
+  <img height=21 src="images/clock/colon.gif" width="9" name="f">
+  <img height="21" src="images/clock/cb.gif" width="16" name="g">
+  <img height="21" src="images/clock/cb.gif" width="16" name="h">
+  <img height="21" src="images/clock/cam.gif" width="16" name="j">
+</SPAN>
+  <SCRIPT language="JavaScript"> 
+  show3();
+</SCRIPT>
+  <DIV class="hello">嗨, 尹竹</DIV>
+</TD>
+  <TD width="75%" align="left">
+  <TABLE>
+  <TR>
+  <TD nowrap>
+  <TABLE>
+  <TR>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=erp"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/erp.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=fas"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/fas.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=mis"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/pdm.gif"></A>
+</TD>
+</TR>
+  <TR>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=erp">工作中心</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=fas">天心外挂</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=mis">MIS</A>
+</TD>
+</TR>
+</TABLE>
+</TD>
+  <TD nowrap>
+  <TABLE>
+  <TR>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=_OUT"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/logout.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=_PF"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/profile.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=cal"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/cal.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=help"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/help.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="http://www.maxim-group.com.cn/" target="home"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/mxhome.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=ntfy"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/cal.gif"></A>
+</TD>
+</TR>
+  <TR>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=_OUT">注销</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=_PF">个人</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=cal">行事历</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=help">帮助</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="http://www.maxim-group.com.cn/" target="home">美声首页</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=ntfy">通知</A>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+  <TD nowrap width="15%" rowspan="2" align="right">
+  <IMG border="0" src="images/logo.gif">
+</TD>
+</TR>
+  <TR>
+  <TD nowrap align="center">
+  <DIV class="MessageBar" id="MBar">
+</DIV>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<!-- Start Template Portal 2 Menu -->
+<TABLE cellpadding="0" cellspacing="0">
+  <TR>
+  <TD nowrap>
+  <span class="MenuGroup">Go to:</span>
+  <SELECT onchange="MenuForm.pg.value=this.value;MenuForm.submit();" name="_pg_" class="MenuGroup">
+  <OPTION value="erp_cod1">客户订单中心（辅料部）</OPTION>
+  <OPTION value="erp_pkl">出货流程</OPTION>
+  <OPTION value="erp_pds">产品设计中心</OPTION>
+  <OPTION selected value="erp_pmc">生产管理中心</OPTION>
+</SELECT>
+</TD>
+  <TD class="MainMenu">
+  <TABLE cellpadding="2" cellspacing="0"><TR>
+  <TD nowrap class="TabOff2">
+  <A href="/PortalManager?pk=erp&pg=erp_pmc&mtb=0&pl=ArtTester&_t=0" class="TabOff2">画稿预览</A>
+</TD>
+  <TD class="TabDiv">&nbsp;</TD>
+  <TD nowrap class="TabOn2">拼版排模</TD>
+  <TD class="TabDiv">&nbsp;</TD>
+  <TD nowrap class="TabOff2">
+  <A href="/PortalManager?pk=erp&pg=erp_pmc&mtb=2&pl=erp_stpc3&_t=0" class="TabOff2">分单生产</A>
+</TD>
+  <TD class="TabDiv">&nbsp;</TD>
+</TR></TABLE>
+</TD>
+</TR>
+</TABLE>
+<!-- End Template Portal  2 Menu -->
+<div class="pbody2">
+<table class="submenu" border="0" cellpadding="2" cellspacing="0">
+   <tr><td width="20%" class="MenuOff">&nbsp;</td>
+<TD nowrap class="MenuOff">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=0&pn=erp_p4001" class="MenuOff">数据注册</A>
+</TD>
+<TD nowrap class="MenuOff">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=1&pn=erp_p40015" class="MenuOff">数据注册精灵</A>
+</TD>
+<TD nowrap class="MenuOn">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=2&pn=erp_p4002" class="MenuOn">生产通知</A>
+</TD>
+<TD nowrap class="MenuOff">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=3&pn=erp_p4004" class="MenuOff">画稿拼版排模</A>
+</TD>
+<TD nowrap class="MenuOff">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=4&pn=erp_p4006" class="MenuOff">生产通知查询</A>
+</TD>
+<TD nowrap class="MenuOff">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=5&pn=erp_p4007" class="MenuOff">数据注册合并</A>
+</TD>
+<TD nowrap class="MenuOff">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=6&pn=erp_p4010" class="MenuOff">Excel模板下载</A>
+</TD>
+   <td width=100% class="MenuOff">&nbsp;</td>
+   </tr></table>
+<form name="MenuForm" action="/PortalManager?pk=erp" method="post"><input type=hidden name=pg></form>
+<!-- Strart Wizard Menu -->
+<table class="wizard" cellspacing="2" >
+ <tr class="wizard"/>
+<TD nowrap class="wizard">
+  生产通知书:
+</TD>
+<TD nowrap class="wizard">
+  <img class="wizard" src="images/sys/wizard1.gif">
+  <a class="wizard" href="javascript:history.go(-3)">
+  选择订单
+  </a>
+</TD>
+<TD nowrap class="wizard">
+  <img class="wizard" src="images/sys/wizard1.gif">
+  <a class="wizard" href="javascript:history.go(-2)">
+  选择货品/注册数据
+  </a>
+</TD>
+<TD nowrap class="wizard">
+  <img class="wizard" src="images/sys/wizard1.gif">
+  <a class="wizard" href="javascript:history.go(-1)">
+  编辑生产通知书
+  </a>
+</TD>
+<TD nowrap class="wizard2">
+  <img class="wizard" src="images/sys/wizard.gif">
+  建立生产通知书
+</TD>
+ </tr></table>
+<FORM name="WizardForm" method="post">
+<INPUT name="act" type="hidden" value="">
+<input type=hidden name=po_type value="SO">
+<input type="hidden" name="ref_data" value="446415"><input type="hidden" name="status_mode" value="SUBMIT"><INPUT onclick="history.back()" name="prve" type="button" class="ButtonStyle" value="上一步">
+<INPUT onclick="WizardForm.act.value=4;WizardForm.status_mode.value='SAVE';WizardForm.submit()" name="save" disabled type="button" class="ButtonStyle" value="暂存生产通知书">
+<INPUT onclick="WizardForm.act.value=4;WizardForm.submit()" name="next" disabled type="button" class="ButtonStyle" value="提交生产通知书">
+<INPUT onclick="WizardForm.act.value=4;WizardForm.status_mode.value='DELETE';WizardForm.submit()" name="del" disabled type="button" class="ButtonStyle" value="删除生产通知书">
+<table border="1" width="100%">
+<tr><TH nowrap align="left">通知单号</TH>
+<TD nowrap class="OddRow">MN090610787</TD>
+<TH nowrap align="left">生产货品</TH>
+<TD nowrap class="OddRow" colspan="5">(23-NLCLI1****-001)NLCLI1 UAE importer label 1</TD>
+<TH nowrap align="left">生产車間</TH>
+<TD nowrap class="OddRow" colspan="1">生管品检</TD>
+</tr><tr><TH nowrap align="left">订单单号</TH>
+<TD nowrap class="OddRow" colspan="1">SO96160045</TD>
+<TH nowrap align="left">客户</TH>
+<TD nowrap class="OddRow" colspan="5">(09368-146)PARISIAN CLOTHING LTD</TD>
+<TH nowrap align="left">订单数量</TH>
+<TD nowrap class="OddRow" colspan="1">4870.0 朱敬</TD>
+</tr><tr><TH nowrap align="left">制令单号</TH>
+<TD nowrap class="OddRow" colspan="1">仓库</TD>
+<TH nowrap align="left">交期</TH>
+<TD nowrap class="OddRow" colspan="1">2009-06-20</TD>
+<TH nowrap align="left">业务员</TH>
+<TD nowrap class="OddRow" colspan="1">王娟</TD>
+<TH nowrap align="left">净重</TH>
+<TD nowrap class="OddRow" colspan="1">1.42 kg</TD>
+<TH nowrap align="left">生产数量</TH>
+<TD nowrap class="OddRow" colspan="1">4870.0 朱敬</TD>
+</tr><tr><TH nowrap align="left">工单流水号</TH>
+<TD nowrap class="OddRow" colspan="1">a</TD>
+<TH nowrap align="left">生产日期</TH>
+<TD nowrap class="OddRow" colspan="1">c</TD>
+<TH nowrap align="left">生管员</TH>
+<TD nowrap class="OddRow" colspan="1">朱敬</TD>
+<TH nowrap align="left">毛重</TH>
+<TD nowrap class="OddRow" colspan="1">0.0 kg</TD>
+<TH nowrap align="left">备库数量</TH>
+<TD nowrap class="OddRow" colspan="1">0.0 朱敬</TD>
+</tr><tr><TH nowrap align="left">入库单号</TH>
+<TD nowrap class="OddRow" colspan="1">b</TD>
+<TH nowrap align="left">包装日期</TH>
+<TD nowrap class="OddRow" colspan="1">2009-06-19</TD>
+<TH nowrap align="left">包装员</TH>
+<TD nowrap class="OddRow" colspan="1">朱敬</TD>
+<TH nowrap align="left">体积</TH>
+<TD nowrap class="OddRow" colspan="1">0.0 cm3</TD>
+<TH nowrap align="left">零成本仓</TH>
+<TD nowrap class="OddRow" colspan="1">0.0 朱敬</TD>
+</tr><tr><TH nowrap align="left">本单状态</TH>
+<TD nowrap class="OddRow" colspan="1">结单</TD>
+<TH nowrap align="left">建立日期</TH>
+<TD nowrap class="OddRow" colspan="1">2009-06-19</TD>
+<TH nowrap align="left">制单员</TH>
+<TD nowrap class="OddRow" colspan="1">朱敬</TD>
+<TH nowrap align="left">装箱数</TH>
+<TD nowrap class="OddRow" colspan="1">1 (箱/包/盒)</TD>
+<TH nowrap align="left">特备损耗</TH>
+<TD nowrap class="OddRow" colspan="1">0.0 %</TD>
+</tr><tr><TH nowrap align="left">包装要求</TH>
+<TD nowrap class="OddRow" colspan="5">大包:  ,中包:  ,小包:  ,其它要求: </TD>
+<TH nowrap align="left">等级</TH>
+<TD nowrap class="OddRow" colspan="1">一般</TD>
+<TH nowrap align="left">出货数量</TH>
+<TD nowrap class="OddRow" colspan="1">4918.0 朱敬</TD>
+</tr><tr><TH nowrap align="left">特殊要求</TH>
+<TD nowrap class="OddRow" colspan="3">e</TD>
+<TH nowrap align="left">材质</TH>
+<TD nowrap class="OddRow" colspan="1">d</TD>
+<TH nowrap align="left">订单类型</TH>
+<TD nowrap class="OddRow" colspan="1">国内订单</TD>
+<TH nowrap align="left">产前样</TH>
+<TD nowrap class="OddRow" colspan="1">0.0 朱敬</TD>
+</tr><tr><TH nowrap align="left">附件</TH>
+<TD nowrap class="OddRow" colspan="3">附页 0 张, 彩/黑稿 0 张, 箱麦 0 张, 分包明细 0 张</TD>
+<TH nowrap align="left">封樣</TH>
+<TD nowrap class="OddRow" colspan="3">不提供封样</TD>
+<TH nowrap align="left">业务留样</TH>
+<TD nowrap class="OddRow" colspan="1">0.0 朱敬</TD>
+</tr></table>
+<br><table cellpading=2 cellspacing=2><tr><TH nowrap>项次<input type="hidden" name="bt_id" value="-1"></TH>
+<TH nowrap>订单数量<input type="hidden" name="bt_order" value="0"></TH>
+<TH nowrap>生产数量<input type="hidden" name="bt_ship" value="0"></TH>
+<TH nowrap>备库量<input type="hidden" name="bt_back" value="0"></TH>
+<TH nowrap>特备损耗<input type="hidden" name="bt_extra" value="0"></TH>
+<TH nowrap>po</TH>
+<TH nowrap>style</TH>
+<TH nowrap>color</TH>
+<TH nowrap>size</TH>
+<TH nowrap>barcode</TH>
+<TH nowrap>q1</TH>
+<TH nowrap>q2</TH>
+<TH nowrap>code</TH>
+<TH nowrap>vendor</TH>
+</tr><tr><TD nowrap class="EvenRow" align="right">1</TD>
+<TD nowrap class="EvenRow" align="right">4870</TD>
+<TD nowrap class="EvenRow" align="right">4870</TD>
+<TD nowrap class="EvenRow" align="right">0</TD>
+<TD nowrap class="EvenRow" align="right">48</TD>
+<TD nowrap class="EvenRow" align="left">5795</TD>
+<TD nowrap class="EvenRow" align="left">aav</TD>
+<TD nowrap class="EvenRow" align="left">aad</TD>
+<TD nowrap class="EvenRow" align="left">aae</TD>
+<TD nowrap class="EvenRow" align="left">aas</TD>
+<TD nowrap class="EvenRow" align="left">4870</TD>
+<TD nowrap class="EvenRow" align="left"></TD>
+<TD nowrap class="EvenRow" align="left">aay</TD>
+<TD nowrap class="EvenRow" align="left">aaz</TD>
+</tr></table></FORM>
+</div>
+<SCRIPT language="JavaScript"> 
+  function DocLoad(){
+  }
+</SCRIPT>
+  </BODY>
+</HTML>
+
