@@ -1,0 +1,765 @@
+﻿<HTML>
+<HEAD>
+    <TITLE></TITLE>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <LINK rel="stylesheet" href="PortalManager.css" type="text/css"></LINK>
+    <STYLE>
+    </STYLE>
+    <SCRIPT src="javascript/public.js" language="JavaScript">
+    </SCRIPT>
+  </HEAD>
+  <BODY onload="buildDatePanel('divDatePicker');buildCalculatorPanel('divCalculator');DocLoad();">
+    <DIV class="DatePane" ID="divDatePicker">
+       <IFRAME NAME="frameDatePicker" WIDTH="360" HEIGHT="210" SRC="DatePanel.htm" NORESIZE SCROLLING="no" FRAMEBORDER="no" BORDER="0" FRAMESPACING="0"></IFRAME>
+       <SCRIPT EVENT="onclick()" FOR="document">if(divDatePicker!=null)divDatePicker.style.visibility="hidden";</SCRIPT>
+    </DIV>
+<DIV class="PortalHeader">
+  <TABLE width="100%" cellpadding="3">
+  <TBODY>
+  <TR>
+  <TD bgcolor="black" nowrap valign="top" width="10%" rowspan="2" align="center">
+  <SCRIPT language="JavaScript"> 
+  var dn;
+  c1=new Image(); c1.src="images/clock/c1.gif";
+  c2=new Image(); c2.src="images/clock/c2.gif";
+  c3=new Image(); c3.src="images/clock/c3.gif";
+  c4=new Image(); c4.src="images/clock/c4.gif";
+  c5=new Image(); c5.src="images/clock/c5.gif";
+  c6=new Image(); c6.src="images/clock/c6.gif";
+  c7=new Image(); c7.src="images/clock/c7.gif";
+  c8=new Image(); c8.src="images/clock/c8.gif";
+  c9=new Image(); c9.src="images/clock/c9.gif";
+  c10=new Image(); c10.src="images/clock/c10.gif";
+  c0=new Image(); c0.src="images/clock/c0.gif";
+  cb=new Image();  cb.src="images/clock/cb.gif";
+  cam=new Image(); cam.src="images/clock/cam.gif";
+  cpm=new Image(); cpm.src="images/clock/cpm.gif";
+  cj=new Image(); cj.src="images/clock/cj.gif";
+  function extract(yy,mm,dd,h,m,s,type){
+  if (!document.images) return;
+  document.images.y0.src = eval("c"+Math.floor(yy/1000)+".src");
+  document.images.y1.src = eval("c"+Math.floor(yy/100)%10+".src");
+  document.images.y2.src = eval("c"+Math.floor(yy/10)%100+".src");
+  document.images.y3.src = eval("c"+(yy%1000)+".src");
+  document.images.y5.src = eval("c"+Math.floor(mm/10)+".src");
+  document.images.y6.src = eval("c"+(mm%10)+".src");
+  document.images.y8.src = eval("c"+Math.floor(dd/10)+".src");
+  document.images.y9.src = eval("c"+(dd%10)+".src");
+  if (h <= 9) {
+    document.images.a.src = cb.src;
+    document.images.b.src = eval("c"+h+".src");
+  }else{
+     document.images.a.src = eval("c"+Math.floor(h/10)+".src");
+     document.images.b.src = eval("c"+(h%10)+".src");
+  }
+  if (m <= 9) {
+    document.images.d.src = c0.src;
+    document.images.e.src = eval("c"+m+".src");
+  }else{
+    document.images.d.src = eval("c"+Math.floor(m/10)+".src");
+    document.images.e.src = eval("c"+(m%10)+".src");
+  }
+  if (s <= 9) {
+    document.g.src = c0.src;
+    document.images.h.src = eval("c"+s+".src");
+  }else{
+    document.images.g.src = eval("c"+Math.floor(s/10)+".src");
+    document.images.h.src = eval("c"+(s%10)+".src");
+  }
+  if (dn == "AM") document.j.src = cam.src;
+  else document.images.j.src = cpm.src;
+}
+  function show3(){
+  if(!document.images) return;
+  var Digital = new Date();
+  var hours = Digital.getHours();
+  var minutes = Digital.getMinutes();
+  var seconds = Digital.getSeconds();
+  var yyyy = Digital.getFullYear();
+  var mm = Digital.getMonth()+1;
+  var dd = Digital.getDate();
+  dn = "AM";
+  if ((hours >= 12) && (minutes >= 1) || (hours >= 13)) {
+    dn = "PM";
+    hours = hours-12;
+  }
+  if(hours == 0) hours = 12;
+  extract(yyyy, mm, dd, hours, minutes, seconds, dn);
+  setTimeout("show3()", 1000);
+}
+</SCRIPT>
+  <DIV style="background:black;" class="clock">
+  <img height="18" src="images/clock/c2.gif" width="14" name="y0">
+  <img height="18" src="images/clock/c0.gif" width="14" name="y1">
+  <img height="18" src="images/clock/c0.gif" width="14" name="y2">
+  <img height="18" src="images/clock/c9.gif" width="14" name="y3">
+  <img height="20" src="images/clock/cj.gif" width="15">
+  <img height="18" src="images/clock/c0.gif" width="14" name="y5">
+  <img height="18" src="images/clock/c9.gif" width="14" name="y6">
+  <img height="20" src="images/clock/cj.gif" width="15">
+  <img height="18" src="images/clock/c1.gif" width="14" name="y8">
+  <img height="18" src="images/clock/c0.gif" width="14" name="y9">
+</DIV>
+  <SPAN style="background:black;" class="clock">
+  <img height="21" src="images/clock/cb.gif" width="16" name="a">
+  <img height=21 src="images/clock/cb.gif" width="16" name="b">
+  <img height=21 src="images/clock/colon.gif" width="9" name="c">
+  <img height=21 src="images/clock/cb.gif" width="16" name="d">
+  <img height=21 src="images/clock/cb.gif" width="16" name="e">
+  <img height=21 src="images/clock/colon.gif" width="9" name="f">
+  <img height="21" src="images/clock/cb.gif" width="16" name="g">
+  <img height="21" src="images/clock/cb.gif" width="16" name="h">
+  <img height="21" src="images/clock/cam.gif" width="16" name="j">
+</SPAN>
+  <SCRIPT language="JavaScript"> 
+  show3();
+</SCRIPT>
+  <DIV class="hello">嗨, 尹竹</DIV>
+</TD>
+  <TD width="75%" align="left">
+  <TABLE>
+  <TR>
+  <TD nowrap>
+  <TABLE>
+  <TR>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=erp"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/erp.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=fas"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/fas.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=mis"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/pdm.gif"></A>
+</TD>
+</TR>
+  <TR>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=erp">工作中心</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=fas">天心外挂</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=mis">MIS</A>
+</TD>
+</TR>
+</TABLE>
+</TD>
+  <TD nowrap>
+  <TABLE>
+  <TR>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=_OUT"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/logout.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=_PF"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/profile.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=cal"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/cal.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=help"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/help.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="http://www.maxim-group.com.cn/" target="home"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/mxhome.gif"></A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=ntfy"><IMG height="24" border="0" hspace="2" width="24" src="images/sys/cal.gif"></A>
+</TD>
+</TR>
+  <TR>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=_OUT">注销</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=_PF">个人</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=cal">行事历</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=help">帮助</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="http://www.maxim-group.com.cn/" target="home">美声首页</A>
+</TD>
+  <TD nowrap valign="bottom" align="center">
+  <A href="PortalManager?pk=ntfy">通知</A>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+  <TD nowrap width="15%" rowspan="2" align="right">
+  <IMG border="0" src="images/logo.gif">
+</TD>
+</TR>
+  <TR>
+  <TD nowrap align="center">
+  <DIV class="MessageBar" id="MBar">
+</DIV>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<!-- Start Template Portal 2 Menu -->
+<TABLE cellpadding="0" cellspacing="0">
+  <TR>
+  <TD nowrap>
+  <span class="MenuGroup">Go to:</span>
+  <SELECT onchange="MenuForm.pg.value=this.value;MenuForm.submit();" name="_pg_" class="MenuGroup">
+  <OPTION value="erp_cod1">客户订单中心（辅料部）</OPTION>
+  <OPTION value="erp_pkl">出货流程</OPTION>
+  <OPTION value="erp_pds">产品设计中心</OPTION>
+  <OPTION selected value="erp_pmc">生产管理中心</OPTION>
+</SELECT>
+</TD>
+  <TD class="MainMenu">
+  <TABLE cellpadding="2" cellspacing="0"><TR>
+  <TD nowrap class="TabOff2">
+  <A href="/PortalManager?pk=erp&pg=erp_pmc&mtb=0&pl=ArtTester&_t=0" class="TabOff2">画稿预览</A>
+</TD>
+  <TD class="TabDiv">&nbsp;</TD>
+  <TD nowrap class="TabOn2">拼版排模</TD>
+  <TD class="TabDiv">&nbsp;</TD>
+  <TD nowrap class="TabOff2">
+  <A href="/PortalManager?pk=erp&pg=erp_pmc&mtb=2&pl=erp_stpc3&_t=0" class="TabOff2">分单生产</A>
+</TD>
+  <TD class="TabDiv">&nbsp;</TD>
+</TR></TABLE>
+</TD>
+</TR>
+</TABLE>
+<!-- End Template Portal  2 Menu -->
+<div class="pbody2">
+<table class="submenu" border="0" cellpadding="2" cellspacing="0">
+   <tr><td width="20%" class="MenuOff">&nbsp;</td>
+<TD nowrap class="MenuOff">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=0&pn=erp_p4001" class="MenuOff">数据注册</A>
+</TD>
+<TD nowrap class="MenuOff">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=1&pn=erp_p40015" class="MenuOff">数据注册精灵</A>
+</TD>
+<TD nowrap class="MenuOn">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=2&pn=erp_p4002" class="MenuOn">生产通知</A>
+</TD>
+<TD nowrap class="MenuOff">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=3&pn=erp_p4004" class="MenuOff">画稿拼版排模</A>
+</TD>
+<TD nowrap class="MenuOff">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=4&pn=erp_p4006" class="MenuOff">生产通知查询</A>
+</TD>
+<TD nowrap class="MenuOff">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=5&pn=erp_p4007" class="MenuOff">数据注册合并</A>
+</TD>
+<TD nowrap class="MenuOff">
+  <A href="/PortalManager?pk=erp&mtb=1&pg=erp_pmc&pl=erp_p4001&tb=6&pn=erp_p4010" class="MenuOff">Excel模板下载</A>
+</TD>
+   <td width=100% class="MenuOff">&nbsp;</td>
+   </tr></table>
+<form name="MenuForm" action="/PortalManager?pk=erp" method="post"><input type=hidden name=pg></form>
+<!-- Strart Wizard Menu -->
+<table class="wizard" cellspacing="2" >
+ <tr class="wizard"/>
+<TD nowrap class="wizard">
+  生产通知书:
+</TD>
+<TD nowrap class="wizard">
+  <img class="wizard" src="images/sys/wizard1.gif">
+  <a class="wizard" href="javascript:history.go(-2)">
+  选择订单
+  </a>
+</TD>
+<TD nowrap class="wizard">
+  <img class="wizard" src="images/sys/wizard1.gif">
+  <a class="wizard" href="javascript:history.go(-1)">
+  选择货品/注册数据
+  </a>
+</TD>
+<TD nowrap class="wizard2">
+  <img class="wizard" src="images/sys/wizard.gif">
+  编辑生产通知书
+</TD>
+<TD nowrap class="wizard">
+  <img class="wizard" src="images/sys/wizard2.gif">
+  建立生产通知书
+</TD>
+ </tr></table>
+<FORM name="WizardForm" method="post">
+<INPUT name="act" type="hidden" value="">
+<table cellspacing=3 cellpading=2 >
+<tr class=EvenRow>
+<th nowrap>订单号</th><td nowrap>
+SO96160045
+</td><th nowrap>客戶编号</th><td nowrap>
+09368-146
+</td><th nowrap>客戶名称</th><td nowrap>
+PARISIAN CLOTHING LTD
+</td><th nowrap>订单日期</th><td nowrap>
+2009年6月16日
+</td><th nowrap>业务员</th><td nowrap>
+王娟
+</td></tr>
+<tr class=EvenRow>
+<th nowrap>产品编号<td nowrap>
+23-NLCLDFW***-002
+</td><th nowrap>产品名称</th><td nowrap colspan=3>
+NLCLDFW NT670B白色胶带
+</td><th nowrap>订单数量</th><td nowrap>
+4870.0 PCS
+</td><th nowrap>业务仓</th><td nowrap>
+FO13
+</td></tr>
+</table>
+<input type=hidden name=po_type value="SO">
+<input type="hidden" name="rgt_po" value="NOTRGT"><input type="hidden" name="ref_data" value="449974"><table><tr><td valign="top"><TABLE>
+  <TR>
+  <TH colspan="2">生产通知书</TH>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">通知单号</TH>
+  <TD>
+  <INPUT readonly name="wqp_no" type="text" class="KeyStyle" value="MN090614092">
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">订单数量</TH>
+  <TD>
+  <INPUT name="OrderQty" size="10" type="text" class="EvenRow" value="4870.0">
+  <INPUT readonly name="unit" size="6" type="text" class="EvenRow" value="PCS">
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">生产数量</TH>
+  <TD>
+  <INPUT name="ProdQty" size="10" type="text" value="4870.0">
+  <INPUT readonly name="unit" size="6" type="text" class="EvenRow" value="PCS">
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">备库数量</TH>
+  <TD>
+  <INPUT name="BackQty" size="10" type="text" value="0.0">
+  <INPUT readonly name="unit" size="6" type="text" class="EvenRow" value="PCS">
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">零成本仓</TH>
+  <TD>
+  <INPUT name="ZeroQty" size="10" type="text" value="0.0">
+  <INPUT readonly name="unit" size="6" type="text" class="EvenRow" value="PCS">
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">特备损耗</TH>
+  <TD>
+  <INPUT name="ExtraQty" size="10" type="text" value="0.0">
+  %
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">产前样</TH>
+  <TD>
+  <INPUT name="ProdBefore" size="10" type="text" value="0.0">
+  <INPUT readonly name="unit" size="6" type="text" class="EvenRow" value="PCS">
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">产后业务留样</TH>
+  <TD>
+  <INPUT name="ProdAfter" size="10" type="text" value="0.0">
+  <INPUT readonly name="unit" size="6" type="text" class="EvenRow" value="PCS">
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">材质</TH>
+  <TD>
+  <INPUT name="material" type="text" value="">
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">封样</TH>
+  <TD>
+  <SELECT name="sample">
+  <OPTION selected value="0">不提供封样</OPTION>
+  <OPTION value="1">内容依稿件,其它按封样</OPTION>
+  <OPTION value="2">按封样生产</OPTION>
+  <OPTION value="4">内容依稿件,刀模、材质、颜色、工艺按封样</OPTION>
+  <OPTION value="3">其它,参考特殊要求说明</OPTION>
+</SELECT>
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">附件</TH>
+  <TD>
+  附　　页
+  <INPUT name="PageNo" size="6" type="text" value="0">
+  张
+  <BR>
+  彩／黑稿
+  <INPUT name="ArtNo" size="6" type="text" value="0">
+  张
+  <BR>
+  箱　　麦
+  <INPUT name="BoxNo" size="6" type="text" value="0">
+  张
+  <BR>
+  分包明细
+  <INPUT name="PackNo" size="6" type="text" value="0">
+  张
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">生产车间</TH>
+  <TD>
+  <SELECT name="Factory">
+  <OPTION value=""></OPTION>
+  <OPTION value="Payless">Payless</OPTION>
+  <OPTION value="采购">采购</OPTION>
+  <OPTION value="二车间">二车间</OPTION>
+  <OPTION value="青岛生产车间">青岛生产车间</OPTION>
+  <OPTION value="柔版印刷车间">柔版印刷车间</OPTION>
+  <OPTION selected value="生管品检">生管品检</OPTION>
+  <OPTION value="外发采购">外发采购</OPTION>
+  <OPTION value="一车间">一车间</OPTION>
+  <OPTION value="印务排膜">印务排膜</OPTION>
+</SELECT>
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">订单类型</TH>
+  <TD>
+  <SELECT name="pk_to">
+  <OPTION selected value="I">国内订单</OPTION>
+  <OPTION value="O">出口订单</OPTION>
+</SELECT>
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">等级</TH>
+  <TD>
+  <SELECT name="level">
+  <OPTION selected value="G">一般</OPTION>
+  <OPTION value="U">急件</OPTION>
+  <OPTION value="S">特急件</OPTION>
+  <OPTION value="O">出口单</OPTION>
+</SELECT>
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">交期</TH>
+  <TD>
+  <SPAN>
+  <span nowrap>
+  <INPUT name="ship_date" size="12" type="text" value="2009-06-24">
+  <A href="#" onclick="if(oDP)oDP.open(ship_date,false);return false;"><IMG height="18" border="0" width="24" src="images/sys/dtpicker.gif"></A>
+  </span>
+</SPAN>
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">制单员</TH>
+  <TD>
+  <INPUT readonly name="creator" type="text" value="陈中华">
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">建立日期</TH>
+  <TD>
+  <SPAN>
+  <span nowrap>
+  <INPUT name="create_date" size="12" type="text" value="2009-06-24">
+  <A href="#" onclick="if(oDP)oDP.open(create_date,false);return false;"><IMG height="18" border="0" width="24" src="images/sys/dtpicker.gif"></A>
+  </span>
+</SPAN>
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap align="left">包装要求</TH>
+  <TD>
+  大包 
+  <SELECT name="pk_big">
+  <OPTION selected value=""></OPTION>
+  <OPTION value="PO">客戶订单号</OPTION>
+  <OPTION value="CATALOG">款式</OPTION>
+  <OPTION value="SIZE">尺码</OPTION>
+  <OPTION value="COLOR">颜色</OPTION>
+  <OPTION value="VENDOR">代理商</OPTION>
+  <OPTION value="BARCODE">条形码</OPTION>
+  <OPTION value="CODE">客戶产品</OPTION>
+</SELECT>
+  <BR>
+  中包 
+  <SELECT name="pk_middle">
+  <OPTION selected value=""></OPTION>
+  <OPTION value="PO">客戶订单号</OPTION>
+  <OPTION value="CATALOG">款式</OPTION>
+  <OPTION value="SIZE">尺码</OPTION>
+  <OPTION value="COLOR">颜色</OPTION>
+  <OPTION value="VENDOR">代理商</OPTION>
+  <OPTION value="BARCODE">条形码</OPTION>
+  <OPTION value="CODE">客戶产品</OPTION>
+</SELECT>
+  <BR>
+  小包 
+  <SELECT name="pk_small">
+  <OPTION selected value=""></OPTION>
+  <OPTION value="PO">客戶订单号</OPTION>
+  <OPTION value="CATALOG">款式</OPTION>
+  <OPTION value="SIZE">尺码</OPTION>
+  <OPTION value="COLOR">颜色</OPTION>
+  <OPTION value="VENDOR">代理商</OPTION>
+  <OPTION value="BARCODE">条形码</OPTION>
+  <OPTION value="CODE">客戶产品</OPTION>
+  <OPTION value="ALL">所有款式</OPTION>
+</SELECT>
+  <BR>
+  <TEXTAREA name="pk_spec" rows="6" cols="20">阿斯顿发的萨芬萨发生的</TEXTAREA>
+</TD>
+</TR>
+  <TR class="EvenRow">
+  <TH nowrap valign="top" align="left">特殊要求</TH>
+  <TD>
+  <TEXTAREA name="memo" rows="6" cols="20">asdfasdfasdfdsafdsafasdfas
+  fas
+  dfasdf</TEXTAREA>
+</TD>
+</TR>
+</TABLE>
+</td><td valign="top"><span class="EvenRow">生产相关数量:
+<SELECT onchange="changeQty(this.value)" name="ref_qty">
+  <OPTION value="1">数量一</OPTION>
+  <OPTION value="2">数量二</OPTION>
+  <OPTION value="3">数量三</OPTION>
+  <OPTION value="4">数量四</OPTION>
+  <OPTION value="5">数量五</OPTION>
+  <OPTION value="12">数量一,二</OPTION>
+  <OPTION value="0">还原</OPTION>
+</SELECT>
+<INPUT onclick="history.back()" name="prve" type="button" class="ButtonStyle" value="上一步">
+<INPUT onclick="if(WizardForm.Factory.value==''||WizardForm.ship_date.value==''){alert('请选好车间和正确交期!!')}else{ WizardForm.act.value=3;WizardForm.submit();}" name="next" type="button" class="ButtonStyle" value="下一步">
+&nbsp;&nbsp;损耗率<INPUT name="ratio" size="4" type="text" onkeyup="changeRatio()" value="0">
+%&nbsp;&nbsp;损耗量<INPUT name="ratio2" size="4" type="text" onkeyup="changeRatio()" value="0">
+</span><script language="JavaScript"> 
+  var RQ = new Array();
+  var OQ,SQ,BQ;
+  RQ[0]=[0,0,0,0,0,0,0,0];
+  RQ[1]=[370,370,0,370,0,0,0,0];
+  RQ[2]=[850,850,0,850,0,0,0,0];
+  RQ[3]=[1210,1210,0,1210,0,0,0,0];
+  RQ[4]=[730,730,0,730,0,0,0,0];
+  RQ[5]=[250,250,0,250,0,0,0,0];
+  RQ[6]=[970,970,0,970,0,0,0,0];
+  RQ[7]=[490,490,0,490,0,0,0,0];
+  function changeRatio(){
+  var val=WizardForm.ratio.value*1;
+  var val2=WizardForm.ratio2.value*1;
+  OQ=WizardForm.elements['bt_order'];
+  SQ=WizardForm.elements['bt_ship'];
+  for(i=1;i<OQ.length;i++)
+   SQ[i].value=Math.ceil((1+(val/100))*(OQ[i].value*1))+val2;
+   sumControlValue(WizardForm.ProdQty,SQ);
+  }
+  function changeQty(idx){
+   OQ=WizardForm.elements['bt_order'];
+   SQ=WizardForm.elements['bt_ship'];
+   BQ=WizardForm.elements['bt_back'];
+   index=idx*1;
+   for(i=1;i<OQ.length;i++){
+    if(index==0)
+    {  OQ[i].value=RQ[i][0]; SQ[i].value=RQ[i][1]; BQ[i].value=RQ[i][2]; }
+    else if(index==12)
+    {  OQ[i].value=RQ[i][3]; SQ[i].value=RQ[i][4]; BQ[i].value=0; }
+    else
+    {  OQ[i].value=RQ[i][index+2]; SQ[i].value=RQ[i][index+2]; BQ[i].value=0; }
+   }
+   sumControlValue(WizardForm.ProdQty,SQ);
+  }
+</script>
+<table cellpading=2 cellspacing=2><tr><TH nowrap>项次<input type="hidden" name="bt_id" value="-1"></TH>
+<TH nowrap>订单数量<input type="hidden" name="bt_order" value="0"></TH>
+<TH nowrap>生产数量<input type="hidden" name="bt_ship" value="0"></TH>
+<TH nowrap>备库量<input type="hidden" name="bt_back" value="0"></TH>
+<TH nowrap>特备损耗<input type="hidden" name="bt_extra" value="0"></TH>
+<TH nowrap>po</TH>
+<TH nowrap>style</TH>
+<TH nowrap>color</TH>
+<TH nowrap>size</TH>
+<TH nowrap>barcode</TH>
+<TH nowrap>q1</TH>
+<TH nowrap>q2</TH>
+<TH nowrap>code</TH>
+<TH nowrap>vendor</TH>
+</tr><tr class="EvenRow"><TD nowrap>1</TD>
+<TD nowrap>
+  <INPUT name="bt_order" size="8" type="text" class="EvenRow" value="370">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_ship" size="8" type="text" onkeyup="sumControlValue(WizardForm.ProdQty,WizardForm.elements['bt_ship'])" class="EvenRow" value="370">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_id" type="hidden" value="7261506">
+  <INPUT name="bt_back" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="EvenRow" value="0">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_extra" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="EvenRow" value="4">
+</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>6</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>370</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+</tr><tr class="OddRow"><TD nowrap>2</TD>
+<TD nowrap>
+  <INPUT name="bt_order" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="OddRow" value="850">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_ship" size="8" type="text" onkeyup="sumControlValue(WizardForm.ProdQty,WizardForm.elements['bt_ship'])" class="OddRow" value="850">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_id" type="hidden" value="7261507">
+  <INPUT name="bt_back" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="OddRow" value="0">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_extra" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="OddRow" value="9">
+</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>8</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>850</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+</tr><tr class="EvenRow"><TD nowrap>3</TD>
+<TD nowrap>
+  <INPUT name="bt_order" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="EvenRow" value="1210">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_ship" size="8" type="text" onkeyup="sumControlValue(WizardForm.ProdQty,WizardForm.elements['bt_ship'])" class="EvenRow" value="1210">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_id" type="hidden" value="7261508">
+  <INPUT name="bt_back" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="EvenRow" value="0">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_extra" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="EvenRow" value="13">
+</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>10</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>1210</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+</tr><tr class="OddRow"><TD nowrap>4</TD>
+<TD nowrap>
+  <INPUT name="bt_order" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="OddRow" value="730">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_ship" size="8" type="text" onkeyup="sumControlValue(WizardForm.ProdQty,WizardForm.elements['bt_ship'])" class="OddRow" value="730">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_id" type="hidden" value="7261509">
+  <INPUT name="bt_back" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="OddRow" value="0">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_extra" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="OddRow" value="8">
+</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>12</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>730</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+</tr><tr class="EvenRow"><TD nowrap>5</TD>
+<TD nowrap>
+  <INPUT name="bt_order" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="EvenRow" value="250">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_ship" size="8" type="text" onkeyup="sumControlValue(WizardForm.ProdQty,WizardForm.elements['bt_ship'])" class="EvenRow" value="250">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_id" type="hidden" value="7261510">
+  <INPUT name="bt_back" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="EvenRow" value="0">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_extra" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="EvenRow" value="3">
+</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>14</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>250</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+</tr><tr class="OddRow"><TD nowrap>6</TD>
+<TD nowrap>
+  <INPUT name="bt_order" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="OddRow" value="970">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_ship" size="8" type="text" onkeyup="sumControlValue(WizardForm.ProdQty,WizardForm.elements['bt_ship'])" class="OddRow" value="970">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_id" type="hidden" value="7261511">
+  <INPUT name="bt_back" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="OddRow" value="0">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_extra" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="OddRow" value="5">
+</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>16</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>970</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+</tr><tr class="EvenRow"><TD nowrap>7</TD>
+<TD nowrap>
+  <INPUT name="bt_order" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="EvenRow" value="490">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_ship" size="8" type="text" onkeyup="sumControlValue(WizardForm.ProdQty,WizardForm.elements['bt_ship'])" class="EvenRow" value="490">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_id" type="hidden" value="7261512">
+  <INPUT name="bt_back" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="EvenRow" value="0">
+</TD>
+<TD nowrap>
+  <INPUT name="bt_extra" size="8" type="text" onkeyup="sumControlValue(WizardForm.BackQty,WizardForm.elements['bt_back'])" class="EvenRow" value="5">
+</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>18</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>490</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+<TD nowrap>&nbsp;</TD>
+</tr></table></td></tt></table><script language="JavaScript">var SQ=WizardForm.elements['bt_ship'];sumControlValue(WizardForm.ProdQty,SQ);</script>
+</FORM>
+</div>
+<SCRIPT language="JavaScript"> 
+  function DocLoad(){
+  }
+</SCRIPT>
+  </BODY>
+</HTML>
