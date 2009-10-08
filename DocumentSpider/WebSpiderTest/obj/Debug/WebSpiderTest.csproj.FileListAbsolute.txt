@@ -1,7 +1,0 @@
-C:\Documents and Settings\steven.jiang\桌面\DocumentSpider\WebSpiderTest\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\steven.jiang\桌面\DocumentSpider\WebSpiderTest\bin\Debug\WebSpiderTest.exe
-C:\Documents and Settings\steven.jiang\桌面\DocumentSpider\WebSpiderTest\bin\Debug\WebSpiderTest.pdb
-C:\Documents and Settings\steven.jiang\桌面\DocumentSpider\WebSpiderTest\bin\Debug\DocumentSpider.dll
-C:\Documents and Settings\steven.jiang\桌面\DocumentSpider\WebSpiderTest\bin\Debug\DocumentSpider.pdb
-C:\Documents and Settings\steven.jiang\桌面\DocumentSpider\WebSpiderTest\obj\Debug\WebSpiderTest.exe
-C:\Documents and Settings\steven.jiang\桌面\DocumentSpider\WebSpiderTest\obj\Debug\WebSpiderTest.pdb

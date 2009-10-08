@@ -1,5 +1,0 @@
-C:\Documents and Settings\steven.jiang\桌面\DocumentSpider\DocumentSpider\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\steven.jiang\桌面\DocumentSpider\DocumentSpider\bin\Debug\DocumentSpider.dll
-C:\Documents and Settings\steven.jiang\桌面\DocumentSpider\DocumentSpider\bin\Debug\DocumentSpider.pdb
-C:\Documents and Settings\steven.jiang\桌面\DocumentSpider\DocumentSpider\obj\Debug\DocumentSpider.dll
-C:\Documents and Settings\steven.jiang\桌面\DocumentSpider\DocumentSpider\obj\Debug\DocumentSpider.pdb
