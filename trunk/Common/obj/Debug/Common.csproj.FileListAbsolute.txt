@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\NetShop_Solution\NetShop_Solution\Common\bin\Debug\Common.dll
+C:\Users\Administrator\Desktop\NetShop_Solution\NetShop_Solution\Common\bin\Debug\Common.pdb
+C:\Users\Administrator\Desktop\NetShop_Solution\NetShop_Solution\Common\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\NetShop_Solution\NetShop_Solution\Common\obj\Debug\Common.dll
+C:\Users\Administrator\Desktop\NetShop_Solution\NetShop_Solution\Common\obj\Debug\Common.pdb
+E:\SourceCode\NetShop_Solution\Common\bin\Debug\Common.dll
+E:\SourceCode\NetShop_Solution\Common\bin\Debug\Common.pdb
+E:\SourceCode\NetShop_Solution\Common\obj\Debug\ResolveAssemblyReference.cache
+E:\SourceCode\NetShop_Solution\Common\obj\Debug\Common.dll
+E:\SourceCode\NetShop_Solution\Common\obj\Debug\Common.pdb
