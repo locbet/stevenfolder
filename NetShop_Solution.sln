@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{31F41457-B83B-424E-98EA-4C7768B3B91B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{59144EA3-31FC-4B5F-A9EB-9F09DDBD5CE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{6650F0BB-F5E1-4068-BCE0-37964A1E3E09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{BC8A01C4-E838-4228-9F40-242590BF8EAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{1105DA74-EE87-4861-89C7-24E07F3C2F7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCore", "DataCore\DataCore.csproj", "{FD5A4D25-540B-4652-A79F-14010C94498F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{20D9E3B5-00B5-426D-9D56-10CB6CDECD03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ComponentArt", "ComponentArt", "{79E816D9-6DB8-4601-AA85-FAD759819C94}"
+	ProjectSection(SolutionItems) = preProject
+		External\ComponentArt.Web.UI.dll = External\ComponentArt.Web.UI.dll
+		External\ComponentArt.Web.UI.xml = External\ComponentArt.Web.UI.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telerik", "Telerik", "{62A28A2E-C540-4746-8C4A-8D7936168C3A}"
+	ProjectSection(SolutionItems) = preProject
+		External\RadAjax.Net2.dll = External\RadAjax.Net2.dll
+		External\RadCalendar.Net2.dll = External\RadCalendar.Net2.dll
+		External\RadEditor.Net2.dll = External\RadEditor.Net2.dll
+		External\RadMenu.Net2.dll = External\RadMenu.Net2.dll
+		External\RadPanelbar.Net2.dll = External\RadPanelbar.Net2.dll
+		External\RadSplitter.Net2.dll = External\RadSplitter.Net2.dll
+		External\RadTabStrip.Net2.dll = External\RadTabStrip.Net2.dll
+		External\RadWindow.Net2.dll = External\RadWindow.Net2.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopWeb", "ShopWeb\ShopWeb.csproj", "{0163805E-BC21-4004-8E33-B2DC9CAF9303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopAdmin", "ShopAdmin\ShopAdmin.csproj", "{F82612EB-924F-4511-A0DA-01E0F2393576}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC8A01C4-E838-4228-9F40-242590BF8EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC8A01C4-E838-4228-9F40-242590BF8EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC8A01C4-E838-4228-9F40-242590BF8EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC8A01C4-E838-4228-9F40-242590BF8EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1105DA74-EE87-4861-89C7-24E07F3C2F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1105DA74-EE87-4861-89C7-24E07F3C2F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1105DA74-EE87-4861-89C7-24E07F3C2F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1105DA74-EE87-4861-89C7-24E07F3C2F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD5A4D25-540B-4652-A79F-14010C94498F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD5A4D25-540B-4652-A79F-14010C94498F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD5A4D25-540B-4652-A79F-14010C94498F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD5A4D25-540B-4652-A79F-14010C94498F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20D9E3B5-00B5-426D-9D56-10CB6CDECD03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20D9E3B5-00B5-426D-9D56-10CB6CDECD03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20D9E3B5-00B5-426D-9D56-10CB6CDECD03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20D9E3B5-00B5-426D-9D56-10CB6CDECD03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0163805E-BC21-4004-8E33-B2DC9CAF9303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0163805E-BC21-4004-8E33-B2DC9CAF9303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0163805E-BC21-4004-8E33-B2DC9CAF9303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0163805E-BC21-4004-8E33-B2DC9CAF9303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F82612EB-924F-4511-A0DA-01E0F2393576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F82612EB-924F-4511-A0DA-01E0F2393576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F82612EB-924F-4511-A0DA-01E0F2393576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F82612EB-924F-4511-A0DA-01E0F2393576}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79E816D9-6DB8-4601-AA85-FAD759819C94} = {31F41457-B83B-424E-98EA-4C7768B3B91B}
+		{62A28A2E-C540-4746-8C4A-8D7936168C3A} = {31F41457-B83B-424E-98EA-4C7768B3B91B}
+		{BC8A01C4-E838-4228-9F40-242590BF8EAE} = {59144EA3-31FC-4B5F-A9EB-9F09DDBD5CE0}
+		{1105DA74-EE87-4861-89C7-24E07F3C2F7F} = {59144EA3-31FC-4B5F-A9EB-9F09DDBD5CE0}
+		{FD5A4D25-540B-4652-A79F-14010C94498F} = {59144EA3-31FC-4B5F-A9EB-9F09DDBD5CE0}
+		{20D9E3B5-00B5-426D-9D56-10CB6CDECD03} = {59144EA3-31FC-4B5F-A9EB-9F09DDBD5CE0}
+		{0163805E-BC21-4004-8E33-B2DC9CAF9303} = {6650F0BB-F5E1-4068-BCE0-37964A1E3E09}
+		{F82612EB-924F-4511-A0DA-01E0F2393576} = {6650F0BB-F5E1-4068-BCE0-37964A1E3E09}
+	EndGlobalSection
+EndGlobal

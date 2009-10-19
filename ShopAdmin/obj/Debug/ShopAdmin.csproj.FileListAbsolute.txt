@@ -1,0 +1,5 @@
+E:\SourceCode\NetShop_Solution\ShopAdmin\bin\ShopAdmin.dll
+E:\SourceCode\NetShop_Solution\ShopAdmin\bin\ShopAdmin.pdb
+E:\SourceCode\NetShop_Solution\ShopAdmin\obj\Debug\ResolveAssemblyReference.cache
+E:\SourceCode\NetShop_Solution\ShopAdmin\obj\Debug\ShopAdmin.dll
+E:\SourceCode\NetShop_Solution\ShopAdmin\obj\Debug\ShopAdmin.pdb
