@@ -4,7 +4,7 @@ namespace DataCore
     /// <summary>
     /// 
     /// </summary>
-    public class TestStaticHelper : Base.BaseStaticHelper<ConnString.TestRapTierConnString>
+    public class NetShopStaticHelper : Base.BaseStaticHelper<ConnString.NetShopConnString>
     {
     }
 }

@@ -6,10 +6,10 @@ namespace DataCore
     /// <summary>
     /// 
     /// </summary>
-    public class TestHelper : Base.BaseHelper
+    public class NetShopHelper : Base.BaseHelper
     {
-        private static ConnString.TestRapTierConnString conn = new ConnString.TestRapTierConnString();
-        public TestHelper()
+        private static ConnString.NetShopConnString conn = new ConnString.NetShopConnString();
+        public NetShopHelper()
             : base(conn)
         {
 
@@ -22,7 +22,7 @@ namespace DataCore
             }
             parameter.Value = value;
         }
-        ~TestHelper()
+        ~NetShopHelper()
         {
             this.Close();
         }

@@ -6,7 +6,7 @@ using Business.DAL;
 
 namespace Business
 {
-    public class UserBLL : UserDAL
+    public class CategoryBLL : CategoryDAL
     {
 
     }
