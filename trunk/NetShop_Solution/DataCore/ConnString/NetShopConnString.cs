@@ -3,9 +3,9 @@
     /// <summary>
     /// 数据库连接类
     /// </summary>
-    public class TestRapTierConnString : Base.AbsConnString
+    public class NetShopConnString : Base.AbsConnString
     {
-        public TestRapTierConnString()
+        public NetShopConnString()
         {
 
         }
@@ -16,7 +16,7 @@
             {
                 if (string.IsNullOrEmpty(_connectionstring))
                 {
-                    _connectionstring = System.Configuration.ConfigurationManager.ConnectionStrings["TestRapTier"].ConnectionString;
+                    _connectionstring = System.Configuration.ConfigurationManager.ConnectionStrings["NetShopConnString"].ConnectionString;
                 }
                 return _connectionstring;
             }

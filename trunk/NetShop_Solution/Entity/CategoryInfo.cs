@@ -22,7 +22,7 @@ namespace Entity
     /// Do not change this source code manually. Update the <see cref="UserRow"/>
     /// class if you need to add or change some functionality.
     /// </remarks>
-    public class UserInfo
+    public class CategoryInfo
     {
         private System.Guid _id;
         private string _userName;
@@ -32,7 +32,7 @@ namespace Entity
         /// <summary>
         /// Initializes a new instance of the <see cref="UserInfo"/> class.
         /// </summary>
-        public UserInfo()
+        public CategoryInfo()
         {
             // EMPTY
         }
@@ -82,9 +82,9 @@ namespace Entity
         /// Returns UserInfo of this instance.
         /// </summary>
         /// <returns>UserInfo of this instance.</returns>
-        public static UserInfo SetValue(IDataReader reader)
+        public static CategoryInfo SetValue(IDataReader reader)
         {
-            UserInfo info = new UserInfo();
+            CategoryInfo info = new CategoryInfo();
             int idColumnIndex = reader.GetOrdinal("ID");
             int userNameColumnIndex = reader.GetOrdinal("UserName");
             int passWordColumnIndex = reader.GetOrdinal("PassWord");

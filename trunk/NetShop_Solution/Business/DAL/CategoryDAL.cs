@@ -8,18 +8,18 @@ using System.Data;
 
 namespace Business.DAL
 {
-    public class UserDAL
+    public class CategoryDAL
     {
-        public UserInfo CheckLogin()
+        public CategoryInfo CheckLogin()
         {
             string sql = "select * from [User] where [UserName]=@username";
-            using (TestHelper db = new TestHelper())
+            using (NetShopHelper db = new NetShopHelper())
             {
                 IDbDataParameter p = db.CreateParameter("@username", SqlDbType.NVarChar, 50, "steven");
                 IDataReader reader = db.ExecuteReader(sql, p);
                 if (reader.Read())
                 {
-                    return UserInfo.SetValue(reader);
+                    return CategoryInfo.SetValue(reader);
                 }
                 else
                 {
@@ -30,7 +30,7 @@ namespace Business.DAL
         public int GetUserCount()
         {
             string sql = "select count(*) from [User]";
-            return Convert.ToInt32(TestStaticHelper.ExecuteScalar(CommandType.Text, sql));
+            return Convert.ToInt32(NetShopStaticHelper.ExecuteScalar(CommandType.Text, sql));
         }
     }
 }

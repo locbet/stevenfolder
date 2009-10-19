@@ -45,8 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\UserDAL.cs" />
-    <Compile Include="UserBLL.cs" />
+    <Compile Include="DAL\CategoryDAL.cs" />
+    <Compile Include="CategoryBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
