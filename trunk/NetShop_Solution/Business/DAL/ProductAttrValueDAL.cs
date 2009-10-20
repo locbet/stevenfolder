@@ -8,8 +8,8 @@ using System.Data;
 
 namespace Business.DAL
 {
-    public class CategoryDAL
+    public class ProductAttrValueDAL
     {
-
+       
     }
 }
