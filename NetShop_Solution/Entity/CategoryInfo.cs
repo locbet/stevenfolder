@@ -1,4 +1,4 @@
-﻿// <fileinfo name="Entity\UserInfo.cs">
+// <fileinfo name="Entity\CategoryInfo.cs">
 //		<copyright>
 //			All rights reserved.
 //		</copyright>
@@ -14,91 +14,103 @@ using System.Data;
 
 namespace Entity
 {
-    /// <summary>
-    /// The base class for <see cref="UserRow"/> that 
-    /// represents a record in the <c>User</c> table.
-    /// </summary>
-    /// <remarks>
-    /// Do not change this source code manually. Update the <see cref="UserRow"/>
-    /// class if you need to add or change some functionality.
-    /// </remarks>
-    public class CategoryInfo
-    {
-        private System.Guid _id;
-        private string _userName;
-        private string _passWord;
-        private string _memo;
+	/// <summary>
+	/// The base class for <see cref="CategoryRow"/> that 
+	/// represents a record in the <c>Tbl_Category</c> table.
+	/// </summary>
+	/// <remarks>
+	/// Do not change this source code manually. Update the <see cref="CategoryRow"/>
+	/// class if you need to add or change some functionality.
+	/// </remarks>
+	public class CategoryInfo
+	{
+		private int _id;
+		private string _cateName;
+		private int _parentID;
+		private int _levelID;
+		private string _pageUrl;
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserInfo"/> class.
-        /// </summary>
-        public CategoryInfo()
-        {
-            // EMPTY
-        }
+		/// <summary>
+		/// Initializes a new instance of the <see cref="CategoryInfo"/> class.
+		/// </summary>
+		public CategoryInfo()
+		{
+			// EMPTY
+		}
 
-        /// <summary>
-        /// Gets or sets the <c>ID</c> column value.
-        /// </summary>
-        /// <value>The <c>ID</c> column value.</value>
-        public System.Guid ID
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
+		/// <summary>
+		/// Gets or sets the <c>ID</c> column value.
+		/// </summary>
+		/// <value>The <c>ID</c> column value.</value>
+		public int ID
+		{
+			get { return _id; }
+			set { _id = value; }
+		}
 
-        /// <summary>
-        /// Gets or sets the <c>UserName</c> column value.
-        /// </summary>
-        /// <value>The <c>UserName</c> column value.</value>
-        public string UserName
-        {
-            get { return _userName; }
-            set { _userName = value; }
-        }
+		/// <summary>
+		/// Gets or sets the <c>CateName</c> column value.
+		/// </summary>
+		/// <value>The <c>CateName</c> column value.</value>
+		public string CateName
+		{
+			get { return _cateName; }
+			set { _cateName = value; }
+		}
 
-        /// <summary>
-        /// Gets or sets the <c>PassWord</c> column value.
-        /// </summary>
-        /// <value>The <c>PassWord</c> column value.</value>
-        public string PassWord
-        {
-            get { return _passWord; }
-            set { _passWord = value; }
-        }
+		/// <summary>
+		/// Gets or sets the <c>ParentID</c> column value.
+		/// </summary>
+		/// <value>The <c>ParentID</c> column value.</value>
+		public int ParentID
+		{
+			get { return _parentID; }
+			set { _parentID = value; }
+		}
 
-        /// <summary>
-        /// Gets or sets the <c>Memo</c> column value.
-        /// This column is nullable.
-        /// </summary>
-        /// <value>The <c>Memo</c> column value.</value>
-        public string Memo
-        {
-            get { return _memo; }
-            set { _memo = value; }
-        }
+		/// <summary>
+		/// Gets or sets the <c>LevelID</c> column value.
+		/// </summary>
+		/// <value>The <c>LevelID</c> column value.</value>
+		public int LevelID
+		{
+			get { return _levelID; }
+			set { _levelID = value; }
+		}
 
-        /// <summary>
-        /// Returns UserInfo of this instance.
-        /// </summary>
-        /// <returns>UserInfo of this instance.</returns>
-        public static CategoryInfo SetValue(IDataReader reader)
-        {
-            CategoryInfo info = new CategoryInfo();
-            if (reader != null && !reader.IsClosed)
-            {
-                int idColumnIndex = reader.GetOrdinal("ID");
-                int userNameColumnIndex = reader.GetOrdinal("UserName");
-                int passWordColumnIndex = reader.GetOrdinal("PassWord");
-                int memoColumnIndex = reader.GetOrdinal("Memo");
+		/// <summary>
+		/// Gets or sets the <c>PageUrl</c> column value.
+		/// This column is nullable.
+		/// </summary>
+		/// <value>The <c>PageUrl</c> column value.</value>
+		public string PageUrl
+		{
+			get { return _pageUrl; }
+			set { _pageUrl = value; }
+		}
 
-                info.ID = reader.GetGuid(idColumnIndex);
-                info.UserName = Convert.ToString(reader.GetValue(userNameColumnIndex));
-                info.PassWord = Convert.ToString(reader.GetValue(passWordColumnIndex));
-                if (!reader.IsDBNull(memoColumnIndex))
-                    info.Memo = Convert.ToString(reader.GetValue(memoColumnIndex));
-            }
-            return info;
-        }
-    } // End of UserInfo class
+		/// <summary>
+		/// Returns CategoryInfo of this instance.
+		/// </summary>
+		/// <returns>CategoryInfo of this instance.</returns>
+		public static CategoryInfo SetValue(IDataReader reader)
+		{
+			CategoryInfo info = new CategoryInfo();
+			if (reader != null && !reader.IsClosed)
+			{	int idColumnIndex = reader.GetOrdinal("ID");
+				int cateNameColumnIndex = reader.GetOrdinal("CateName");
+				int parentIDColumnIndex = reader.GetOrdinal("ParentID");
+				int levelIDColumnIndex = reader.GetOrdinal("LevelID");
+				int pageUrlColumnIndex = reader.GetOrdinal("PageUrl");
+						
+				info.ID = Convert.ToInt32(reader.GetValue(idColumnIndex));
+				info.CateName = Convert.ToString(reader.GetValue(cateNameColumnIndex));
+				info.ParentID = Convert.ToInt32(reader.GetValue(parentIDColumnIndex));
+				info.LevelID = Convert.ToInt32(reader.GetValue(levelIDColumnIndex));
+				if(!reader.IsDBNull(pageUrlColumnIndex))
+				info.PageUrl = Convert.ToString(reader.GetValue(pageUrlColumnIndex));
+			}
+			return info;
+		}
+	} // End of CategoryInfo class
 } // End of namespace

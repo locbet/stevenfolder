@@ -16,7 +16,7 @@
       <Property Name="generatesqlidentity" Value="True" />
     </Properties>
     <Tables>
-      <Table Name="AutoNum" CodeName="AutoNum" Active="false" Updatable="true">
+      <Table Name="AutoNum" CodeName="AutoNum" Active="true" Updatable="true">
         <Columns>
           <Column Name="KeyID" CodeName="KeyID" DisplayName="KeyID" />
           <Column Name="Seed" CodeName="Seed" DisplayName="Seed" />
@@ -34,7 +34,7 @@
           <Column Name="definition" CodeName="Definition" DisplayName="definition" />
         </Columns>
       </Table>
-      <Table Name="Tbl_Brand" CodeName="Tbl_Brand" Active="false" Updatable="true">
+      <Table Name="Tbl_Brand" CodeName="Brand" Active="true" Updatable="true">
         <Columns>
           <Column Name="ID" CodeName="ID" DisplayName="ID" />
           <Column Name="CateID" CodeName="CateID" DisplayName="CateID" />
@@ -42,7 +42,7 @@
           <Column Name="BrandName" CodeName="BrandName" DisplayName="BrandName" />
         </Columns>
       </Table>
-      <Table Name="Tbl_Category" CodeName="Tbl_Category" Active="false" Updatable="true">
+      <Table Name="Tbl_Category" CodeName="Category" Active="true" Updatable="true">
         <Columns>
           <Column Name="ID" CodeName="ID" DisplayName="ID" />
           <Column Name="CateName" CodeName="CateName" DisplayName="CateName" />
@@ -51,7 +51,7 @@
           <Column Name="PageUrl" CodeName="PageUrl" DisplayName="PageUrl" />
         </Columns>
       </Table>
-      <Table Name="Tbl_Customer" CodeName="Tbl_Customer" Active="false" Updatable="true">
+      <Table Name="Tbl_Customer" CodeName="Customer" Active="true" Updatable="true">
         <Columns>
           <Column Name="CustomerNO" CodeName="CustomerNO" DisplayName="CustomerNO" />
           <Column Name="Email" CodeName="Email" DisplayName="Email" />
@@ -61,7 +61,7 @@
           <Column Name="Mobile" CodeName="Mobile" DisplayName="Mobile" />
         </Columns>
       </Table>
-      <Table Name="Tbl_PriceLevel" CodeName="Tbl_PriceLevel" Active="false" Updatable="true">
+      <Table Name="Tbl_PriceLevel" CodeName="PriceLevel" Active="true" Updatable="true">
         <Columns>
           <Column Name="ID" CodeName="ID" DisplayName="ID" />
           <Column Name="CateID" CodeName="CateID" DisplayName="CateID" />
@@ -71,7 +71,7 @@
           <Column Name="OrderID" CodeName="OrderID" DisplayName="OrderID" />
         </Columns>
       </Table>
-      <Table Name="Tbl_Product" CodeName="Tbl_Product" Active="false" Updatable="true">
+      <Table Name="Tbl_Product" CodeName="Product" Active="true" Updatable="true">
         <Columns>
           <Column Name="ProductNO" CodeName="ProductNO" DisplayName="ProductNO" />
           <Column Name="CateID0" CodeName="CateID0" DisplayName="CateID0" />
@@ -85,21 +85,32 @@
           <Column Name="BrandName" CodeName="BrandName" DisplayName="BrandName" />
         </Columns>
       </Table>
-      <Table Name="Tbl_ProductAttr" CodeName="Tbl_ProductAttr" Active="false" Updatable="true">
+      <Table Name="Tbl_ProductAnswer" CodeName="ProductAnswer" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="ID" CodeName="ID" DisplayName="ID" />
+          <Column Name="ProductNO" CodeName="ProductNO" DisplayName="ProductNO" />
+          <Column Name="ServiceType" CodeName="ServiceType" DisplayName="ServiceType" />
+          <Column Name="Ask" CodeName="Ask" DisplayName="Ask" />
+          <Column Name="Answer" CodeName="Answer" DisplayName="Answer" />
+          <Column Name="YesCount" CodeName="YesCount" DisplayName="YesCount" />
+          <Column Name="NoCount" CodeName="NoCount" DisplayName="NoCount" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_ProductAttr" CodeName="ProductAttr" Active="true" Updatable="true">
         <Columns>
           <Column Name="AttrID" CodeName="AttrID" DisplayName="AttrID" />
           <Column Name="CateID" CodeName="CateID" DisplayName="CateID" />
           <Column Name="AttrName" CodeName="AttrName" DisplayName="AttrName" />
         </Columns>
       </Table>
-      <Table Name="Tbl_ProductAttrValue" CodeName="Tbl_ProductAttrValue" Active="false" Updatable="true">
+      <Table Name="Tbl_ProductAttrValue" CodeName="ProductAttrValue" Active="true" Updatable="true">
         <Columns>
           <Column Name="ProID" CodeName="ProID" DisplayName="ProID" />
           <Column Name="AttrID" CodeName="AttrID" DisplayName="AttrID" />
           <Column Name="AttrValue" CodeName="AttrValue" DisplayName="AttrValue" />
         </Columns>
       </Table>
-      <Table Name="Tbl_ProductComment" CodeName="Tbl_ProductComment" Active="false" Updatable="true">
+      <Table Name="Tbl_ProductComment" CodeName="ProductComment" Active="true" Updatable="true">
         <Columns>
           <Column Name="ID" CodeName="ID" DisplayName="ID" />
           <Column Name="ProductNO" CodeName="ProductNO" DisplayName="ProductNO" />
@@ -111,14 +122,14 @@
           <Column Name="ReplyCount" CodeName="ReplyCount" DisplayName="ReplyCount" />
         </Columns>
       </Table>
-      <Table Name="Tbl_ProductCommentReply" CodeName="Tbl_ProductCommentReply" Active="false" Updatable="true">
+      <Table Name="Tbl_ProductCommentReply" CodeName="ProductCommentReply" Active="true" Updatable="true">
         <Columns>
           <Column Name="ID" CodeName="ID" DisplayName="ID" />
           <Column Name="CommentID" CodeName="CommentID" DisplayName="CommentID" />
           <Column Name="Summary" CodeName="Summary" DisplayName="Summary" />
         </Columns>
       </Table>
-      <Table Name="Tbl_ProductEx" CodeName="Tbl_ProductEx" Active="false" Updatable="true">
+      <Table Name="Tbl_ProductEx" CodeName="ProductEx" Active="true" Updatable="true">
         <Columns>
           <Column Name="ProductNO" CodeName="ProductNO" DisplayName="ProductNO" />
           <Column Name="Intro" CodeName="Intro" DisplayName="Intro" />
@@ -127,7 +138,7 @@
           <Column Name="Service" CodeName="Service" DisplayName="Service" />
         </Columns>
       </Table>
-      <Table Name="Tbl_ProductPic" CodeName="ProductPic" Active="false" Updatable="true">
+      <Table Name="Tbl_ProductPic" CodeName="ProductPic" Active="true" Updatable="true">
         <Columns>
           <Column Name="ID" CodeName="ID" DisplayName="ID" />
           <Column Name="ProductNO" CodeName="ProductNO" DisplayName="ProductNO" />
@@ -137,18 +148,7 @@
           <Column Name="OrderID" CodeName="OrderID" DisplayName="OrderID" />
         </Columns>
       </Table>
-      <Table Name="Tbl_ProductService" CodeName="Tbl_ProductService" Active="false" Updatable="true">
-        <Columns>
-          <Column Name="ID" CodeName="ID" DisplayName="ID" />
-          <Column Name="ProductNO" CodeName="ProductNO" DisplayName="ProductNO" />
-          <Column Name="ServiceType" CodeName="ServiceType" DisplayName="ServiceType" />
-          <Column Name="Ask" CodeName="Ask" DisplayName="Ask" />
-          <Column Name="Answer" CodeName="Answer" DisplayName="Answer" />
-          <Column Name="YesCount" CodeName="YesCount" DisplayName="YesCount" />
-          <Column Name="NoCount" CodeName="NoCount" DisplayName="NoCount" />
-        </Columns>
-      </Table>
-      <Table Name="Tbl_ProudctPic" CodeName="Tbl_ProudctPic" Active="true" Updatable="true">
+      <Table Name="Tbl_ProudctPic" CodeName="ProudctPic" Active="true" Updatable="true">
         <Columns>
           <Column Name="ID" CodeName="ID" DisplayName="ID" />
           <Column Name="ProductNO" CodeName="ProductNO" DisplayName="ProductNO" />
@@ -162,11 +162,6 @@
     <Procedures>
       <Procedure Name="fn_diagramobjects" CodeName="fn_diagramobjects" Active="false">
         <Parameters />
-      </Procedure>
-      <Procedure Name="p_GetAutoNum" CodeName="p_GetAutoNum" Active="false">
-        <Parameters>
-          <Parameter Name="@keyid" CodeName="keyid" />
-        </Parameters>
       </Procedure>
       <Procedure Name="sp_alterdiagram" CodeName="sp_alterdiagram" Active="false">
         <Parameters>
@@ -188,6 +183,11 @@
         <Parameters>
           <Parameter Name="@diagramname" CodeName="diagramname" />
           <Parameter Name="@owner_id" CodeName="owner_id" />
+        </Parameters>
+      </Procedure>
+      <Procedure Name="sp_GetAutoNum" CodeName="sp_GetAutoNum" Active="false">
+        <Parameters>
+          <Parameter Name="@keyid" CodeName="keyid" />
         </Parameters>
       </Procedure>
       <Procedure Name="sp_helpdiagramdefinition" CodeName="sp_helpdiagramdefinition" Active="false">
