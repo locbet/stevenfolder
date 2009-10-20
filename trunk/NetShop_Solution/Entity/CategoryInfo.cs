@@ -85,16 +85,19 @@ namespace Entity
         public static CategoryInfo SetValue(IDataReader reader)
         {
             CategoryInfo info = new CategoryInfo();
-            int idColumnIndex = reader.GetOrdinal("ID");
-            int userNameColumnIndex = reader.GetOrdinal("UserName");
-            int passWordColumnIndex = reader.GetOrdinal("PassWord");
-            int memoColumnIndex = reader.GetOrdinal("Memo");
+            if (reader != null && !reader.IsClosed)
+            {
+                int idColumnIndex = reader.GetOrdinal("ID");
+                int userNameColumnIndex = reader.GetOrdinal("UserName");
+                int passWordColumnIndex = reader.GetOrdinal("PassWord");
+                int memoColumnIndex = reader.GetOrdinal("Memo");
 
-            info.ID = reader.GetGuid(idColumnIndex);
-            info.UserName = Convert.ToString(reader.GetValue(userNameColumnIndex));
-            info.PassWord = Convert.ToString(reader.GetValue(passWordColumnIndex));
-            if (!reader.IsDBNull(memoColumnIndex))
-                info.Memo = Convert.ToString(reader.GetValue(memoColumnIndex));
+                info.ID = reader.GetGuid(idColumnIndex);
+                info.UserName = Convert.ToString(reader.GetValue(userNameColumnIndex));
+                info.PassWord = Convert.ToString(reader.GetValue(passWordColumnIndex));
+                if (!reader.IsDBNull(memoColumnIndex))
+                    info.Memo = Convert.ToString(reader.GetValue(memoColumnIndex));
+            }
             return info;
         }
     } // End of UserInfo class

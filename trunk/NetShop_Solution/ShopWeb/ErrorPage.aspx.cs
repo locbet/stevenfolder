@@ -8,11 +8,11 @@ using ShopWeb._WebUI;
 
 namespace ShopWeb
 {
-    public partial class _Default : BasePage
+    public partial class ErrorPage : BasePage
     {
         protected override void ShowPage()
         {
-
+            
         }
     }
 }
