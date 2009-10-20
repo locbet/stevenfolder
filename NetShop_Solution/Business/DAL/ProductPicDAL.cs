@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Business.DAL;
+using Entity;
+using DataCore;
+using System.Data;
 
-namespace Business
+namespace Business.DAL
 {
-    public class CategoryBLL : BrandDAL
+    public class ProductPicDAL
     {
-
     }
 }

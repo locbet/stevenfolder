@@ -62,8 +62,24 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commodity.aspx.cs">
+      <DependentUpon>Commodity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Computer.aspx.cs">
+      <DependentUpon>Computer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Digital.aspx.cs">
+      <DependentUpon>Digital.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Electronic.aspx.cs">
+      <DependentUpon>Electronic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ErrorPage.aspx.cs">
@@ -76,6 +92,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Commodity.aspx" />
+    <Content Include="Computer.aspx" />
+    <Content Include="Digital.aspx" />
+    <Content Include="Electronic.aspx" />
     <Content Include="log4net.config" />
   </ItemGroup>
   <ItemGroup>
