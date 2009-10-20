@@ -9,7 +9,7 @@ namespace Business
 {
     public class CategoryBLL : CategoryDAL
     {
-        public List<CategoryInfo> GetRoot()
+        public List<CategoryInfo> GetFirst()
         {
             return base.GetCategories(0, 0);
         }
