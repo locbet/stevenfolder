@@ -45,7 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoNumInfo.cs" />
+    <Compile Include="BrandInfo.cs" />
     <Compile Include="CategoryInfo.cs" />
+    <Compile Include="CustomerInfo.cs" />
+    <Compile Include="PriceLevelInfo.cs" />
+    <Compile Include="ProductAnswerInfo.cs" />
+    <Compile Include="ProductAttrInfo.cs" />
+    <Compile Include="ProductAttrValueInfo.cs" />
+    <Compile Include="ProductCommentInfo.cs" />
+    <Compile Include="ProductCommentReplyInfo.cs" />
+    <Compile Include="ProductExInfo.cs" />
+    <Compile Include="ProductInfo.cs" />
+    <Compile Include="ProductPicInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
