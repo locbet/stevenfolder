@@ -101,20 +101,20 @@ namespace <#= GetNamespace() #>
 		public static <#= GetClassName() #> SetValue(IDataReader reader)
 		{
 			<#= GetClassName() #> info = new <#= GetClassName() #>();
-			<#			foreach(IColumn column in Table.Columns)
-						{ ##>
-int <#= GetColumnIndexVariableName(column) #> = reader.GetOrdinal("<#= column.Name #>");
-			<#			} ##>
+			if (reader != null && !reader.IsClosed)
+			{<#foreach(IColumn column in Table.Columns){ ##>
+	int <#= GetColumnIndexVariableName(column) #> = reader.GetOrdinal("<#= column.Name #>");
+			<# } ##>
 			
-			<#					foreach(IColumn column in Table.Columns)
-								{
-									if(column.Nullable)
-									{ ##>
+			<# foreach(IColumn column in Table.Columns)
+				{
+				if(column.Nullable){ ##>
 	if(!reader.IsDBNull(<#=GetColumnIndexVariableName(column)#>))
-				<#					} ##>
-info.<#= GetPropertyName(column) #> = <#= GetReaderCode(column) #>;
-	  <#            }##>return info;
-	  }
+			<# } ##>
+	info.<#= GetPropertyName(column) #> = <#= GetReaderCode(column) #>;
+			<# } ##>}
+			return info;
+		}
 	} // End of <#= GetClassName() #> class
 } // End of namespace
 <#--
