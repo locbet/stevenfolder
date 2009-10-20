@@ -12,9 +12,25 @@ namespace ShopWeb._WebUI
 
         public BasePage()
         {
-            ShowPage();
+            //Trace.Warn("ctor");
         }
-        protected virtual void ShowPage()
+        protected override void OnLoad(EventArgs e)
+        {
+            //Trace.Warn("ProcessPage");
+            ProcessPage();
+            base.OnLoad(e);
+        }
+        protected virtual string ShowHeader()
+        {
+            //Trace.Warn("ShowHeader");
+            return "";
+        }
+        protected virtual string ShowFooter()
+        {
+            //Trace.Warn("ShowFooter");
+            return "";
+        }
+        protected virtual void ProcessPage()
         {
 
         }

@@ -10,7 +10,7 @@ namespace ShopWeb
 {
     public partial class Computer :BasePage
     {
-        protected override void ShowPage()
+        protected override void ProcessPage()
         {
             
         }
