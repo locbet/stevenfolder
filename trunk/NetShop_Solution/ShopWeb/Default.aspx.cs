@@ -10,7 +10,7 @@ namespace ShopWeb
 {
     public partial class _Default : BasePage
     {
-        protected override void ShowPage()
+        protected override void ProcessPage()
         {
 
         }

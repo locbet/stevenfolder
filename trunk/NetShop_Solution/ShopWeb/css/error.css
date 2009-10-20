@@ -1,0 +1,57 @@
+﻿.e_box {
+	WIDTH: 980px
+}
+.error {
+	PADDING-BOTTOM: 15px; PADDING-LEFT: 300px; PADDING-RIGHT: 0px; BACKGROUND: url(http://www.360buy.com/images/error_icon2.jpg) #fff no-repeat 99px center; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 10px
+}
+.error H2 {
+	MARGIN-BOTTOM: 20px; FONT-SIZE: 24px
+}
+.error IMG {
+	DISPLAY: inline
+}
+.tip {
+	BORDER-BOTTOM: #eaa465 1px solid; BORDER-LEFT: #eaa465 1px solid; PADDING-BOTTOM: 10px; MARGIN-TOP: 8px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #fffee1; BORDER-TOP: #eaa465 1px solid; MARGIN-RIGHT: 150px; BORDER-RIGHT: #eaa465 1px solid; PADDING-TOP: 10px
+}
+.tip DT {
+	PADDING-LEFT: 15px; BACKGROUND: url(http://www.360buy.com/images/arrow_2.gif) no-repeat 0px 3px; FONT-WEIGHT: bold
+}
+.tip DD {
+	PADDING-BOTTOM: 8px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; PADDING-TOP: 8px
+}
+.tip A:link {
+	COLOR: #005aa0; MARGIN-RIGHT: 15px
+}
+.tip A:visited {
+	COLOR: #005aa0; MARGIN-RIGHT: 15px
+}
+.Product_List_S7 {
+	BORDER-BOTTOM: #d9d9d9 1px solid; BORDER-LEFT: #d9d9d9 1px solid; PADDING-BOTTOM: 5px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 978px; PADDING-RIGHT: 0px; BACKGROUND: url(http://www.360buy.com/images/pshow_bg_05.gif) #fff repeat-x 50% top; OVERFLOW: hidden; BORDER-TOP: #d9d9d9 1px solid; BORDER-RIGHT: #d9d9d9 1px solid; PADDING-TOP: 0px
+}
+.Product_List_S7 UL {
+	OVERFLOW: hidden; PADDING-TOP: 10px
+}
+.Product_List_S7 LI {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 10px; WIDTH: 24.9%; FLOAT: left; OVERFLOW: hidden
+}
+.Product_List_S7 LI DL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; ZOOM: 1; PADDING-TOP: 0px
+}
+.Product_List_S7 LI DT {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 5px
+}
+.Product_List_S7 LI DT IMG {
+	MARGIN: 0px auto; WIDTH: 100px; HEIGHT: 75px
+}
+.Product_List_S7 LI DD {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 18px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; PADDING-TOP: 0px
+}
+.Product_List_S7 LI .p_Name {
+	LINE-HEIGHT: 15px; MARGIN: 3px 0px; HEIGHT: 30px; OVERFLOW: hidden
+}
+.Product_List_S7 LI .p_Price {
+	HEIGHT: 18px; OVERFLOW: hidden
+}
+.Product_List_S7 LI .p_Price IMG {
+	DISPLAY: inline; VERTICAL-ALIGN: middle
+}

@@ -6,7 +6,7 @@
     <title></title>
 </head>
 <body>
-    <div>
-    </div>
+    <%=ShowHeader() %>
+    <%=ShowFooter() %>
 </body>
 </html>
