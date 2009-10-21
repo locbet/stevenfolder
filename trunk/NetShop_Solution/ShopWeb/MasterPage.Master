@@ -5,7 +5,7 @@
 <head runat="server">
     <link href="css/common.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>    
+    </asp:ContentPlaceHolder>   
 </head>
 <body>
     <div class="Header">
@@ -14,7 +14,8 @@
                 <img alt="京东商城" src="images/logo.gif" width="167" height="46" /></a></div>
         <div class="head_box1">
             <div id="Tip">
-                <span id="vtip1">您好，欢迎来到京东商城！<span>想继续购物之旅？<a href="#">[请登录]</a>，新用户？<a href="#">[免费注册]</a></span></span></div>
+                <span id="vtip1">您好，欢迎来到京东商城！<span>想继续购物之旅？<a href="#">[请登录]</a>，新用户？<a href="#">[免费注册]</a></span></span>
+                </div>
             <div id="MiniToolBar">
                 <ul>
                     <li id="My360buy"><a target="_blank" href="http://jd2008.360buy.com/user_home.aspx">

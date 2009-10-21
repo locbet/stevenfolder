@@ -10,9 +10,9 @@ namespace ShopWeb
 {
     public partial class Commodity : BasePage
     {
-        protected override void PageLoad(EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
-
+            base.OnLoad(e);
         }
     }
 }

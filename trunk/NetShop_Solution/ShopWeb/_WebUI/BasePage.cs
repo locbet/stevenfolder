@@ -13,11 +13,5 @@ namespace ShopWeb._WebUI
         public BasePage()
         {
         }
-        protected abstract void PageLoad(EventArgs e);
-        protected override void OnLoad(EventArgs e)
-        {
-            PageLoad(e);
-            base.OnLoad(e);
-        }
     }
 }
