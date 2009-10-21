@@ -10,12 +10,12 @@ namespace ShopWeb
 {
     public partial class Search : BasePage
     {
-        protected override void ProcessPage()
+        protected override void PageLoad(EventArgs e)
         {
             string _keyword = Request.QueryString["keyword"];
             if (string.IsNullOrEmpty(_keyword))
             {
-                
+
             }
             else
             {

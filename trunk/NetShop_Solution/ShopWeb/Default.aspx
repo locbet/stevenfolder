@@ -1,117 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="false" CodeBehind="Default.aspx.cs" Inherits="ShopWeb._Default" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>京东商城-中国专业的电脑、手机、数码、家电、日用百货网上购物商城</title>
+﻿<%@ Page Title="京东商城-中国专业的电脑、手机、数码、家电、日用百货网上购物商城" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="false" CodeBehind="Default.aspx.cs" Inherits="ShopWeb.Default" %>
+<asp:Content ID="ContentHead" ContentPlaceHolderID="head" runat="server">
     <meta name="description" content="京东商城-专业的数码网上购物商城,产品包括数码、家电、手机、电脑配件、网络产品等数万种商品直销,便捷，诚信的服务,为您提供愉悦的网上商城购物体验!" />
     <meta name="keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东商城" />
-    <link href="css/common.css" rel="stylesheet" type="text/css" />
     <link href="css/default.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    <!--[if !ie]>顶部内容开始<![endif]-->
-    <div class="Header">
-        <div id="Logo">
-            <a href="http://www.360buy.com/">
-                <img alt="京东商城" src="images/logo.gif" width="167"
-                    height="46"></a></div>
-        <!--[if !ie]>logo end<![endif]-->
-        <div class="head_box1">
-            <div id="Tip">
-                <span id="vtip1">您好，欢迎来到京东商城！<span>想继续购物之旅？<a href="javascript:login();">[请登录]</a>，新用户？<a
-                    href="javascript:login();">[免费注册]</a></span></span></div>
-            <!--[if !ie]>tip end<![endif]-->
-            <div id="MiniToolBar">
-                <ul>
-                    <li id="My360buy"><a onclick="setWebBILinkCount('index_top_jd2008')" href="http://jd2008.360buy.com/user_home.aspx">
-                        我的京东</a> </li>
-                    <li class="line">| </li>
-                    <li class="hsub">
-                        <dl id="ServiceCenter">
-                            <dt><a onclick="setWebBILinkCount('index_channel_callcenter')" href="http://www.360buy.com/help/callcenter.aspx"
-                                target="_blank">客服中心</a>
-                                <dd>
-                                    <a onclick="setWebBILinkCount('index_top_order')" href="http://jd2008.360buy.com/user_order.aspx">
-                                        订单中心</a>
-                                    <dd>
-                                        <a onclick="setWebBILinkCount('index_top_fanxiu')" href="http://jd2008.360buy.com/user_cpfx.aspx"
-                                            target="_blank">返修中心</a>
-                                        <dd>
-                                            <a onclick="setWebBILinkCount('index_top_tousu')" href="http://jd2008.360buy.com/complaint.aspx">
-                                                投诉中心</a></dd></dl>
-                    </li>
-                    <li class="line">| </li>
-                    <li><a onclick="setWebBILinkCount('index_top_zhuangji')" href="http://diy.360buy.com/"
-                        target="_blank">装机大师</a> </li>
-                    <li class="line">| </li>
-                    <li class="lpk"><a href="http://market.360buy.com/giftcard/" target="_blank">礼品卡</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="clear">
-            </div>
-            <ul id="Nav">
-                <li class="curr"><span class="Nav_first"><a onfocus="this.blur()" onclick="setWebBILinkCount('index_channel_index')"
-                    href="http://www.360buy.com/">首 页</a></span> </li>
-                <li><span><a onfocus="this.blur()" onclick="setWebBILinkCount('index_channel_ele')"
-                    href="http://www.360buy.com/electronic.html">家用电器</a></span> </li>
-                <li><span><a onfocus="this.blur()" onclick="setWebBILinkCount('index_channel_mobile')"
-                    href="http://www.360buy.com/digital.html">手机数码</a></span> </li>
-                <li><span><a onfocus="this.blur()" onclick="setWebBILinkCount('index_channel_pc')"
-                    href="http://www.360buy.com/computer.html">电脑产品</a></span> </li>
-                <li><span><a onfocus="this.blur()" onclick="setWebBILinkCount('index_channel_jdlife')"
-                    href="http://www.360buy.com/jdlife.html">日用百货</a></span> </li>
-            </ul>
-            <!--[if !ie]>Nav end<![endif]-->
-        </div>
-        <div class="clear">
-        </div>
-        <div class="head_box2">
-            <div class="head_box2_left">
-            </div>
-            <div class="head_box2_right">
-            </div>
-            <div id="HotKeyword">
-            </div>
-            <ul id="Search">
-                <li><strong>商品搜索：</strong> </li>
-                <li class="S_input">
-                    <input onkeydown="javascript:if(event.keyCode==13) search('keyword');" id="keyword"
-                        class="S_input1" onclick="this.value='';this.style.color='#444444'" value="ThinkPad X200"
-                        autocomplete="off">
-                    <div id="Se_tip">
-                    </div>
-                </li>
-                <li class="S_go">
-                    <img class="S_input2" onfocus="this.blur()" onclick="search('keyword');return false;"
-                        src="images/search_submit.jpg">
-                </li>
-            </ul>
-            <!--[if !ie]>Search end<![endif]-->
-            <ul id="Cart">
-                <li class="C_num">
-                    <div id="CartSwitch_wrap">
-                        <img id="CartSwitch" src="images/head3_18.gif" width="14"
-                            height="15"><a onclick="setWebBILinkCount('index_head_cart')" href="http://jd2008.360buy.com/purchase/shoppingcart.aspx">购物车有&nbsp;<strong
-                                id="ProductNum"></strong>&nbsp;件商品</a></div>
-                </li>
-                <li class="C_bal"><a onclick="setWebBILinkCount('index_head_check')" href="http://jd2008.360buy.com/purchase/ShoppingCart.aspx">
-                    去结算</a> </li>
-                <li class="C_ord"><a onclick="setWebBILinkCount('index_head_orders')" href="http://jd2008.360buy.com/user_order.aspx">
-                    我的订单</a> </li>
-            </ul>
-            <!--[if !ie]>Cart end<![endif]-->
-        </div>
-    </div>
-    <div id="MyCart">
-    </div>
-    <div id="My_Cart_Tip" class="Tip360">
-    </div>
-    <div id="Collect_Tip" class="Tip360 w260">
-    </div>
-    <div id="Fqfk_Tip" class="Tip360">
-    </div>
+</asp:Content>
+<asp:Content ID="ContentMain" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
     <div class="Main">
         <div class="left">
             <h2 id="h2_AllSort">
@@ -199,7 +92,8 @@
                                                     href="http://www.360buy.com/products/737-782-972-0-0-0-0-0-0-0-1-1-1.html">充气泵</a></span><span><a
                                                         href="http://www.360buy.com/products/737-782-787-0-0-0-0-0-0-0-1-1-1.html">车载音视</a></span><span><a
                                                             href="http://www.360buy.com/products/737-782-903-0-0-0-0-0-0-0-1-1-1.html">GPS模块</a></span><span><a
-                                                                href="http://www.360buy.com/products/737-782-788-0-0-0-0-0-0-0-1-1-1.html">其它车载用品</a></span></dd></dl>
+                                                                href="http://www.360buy.com/products/737-782-788-0-0-0-0-0-0-0-1-1-1.html">其它车载用品</a></span></dd>
+                </dl>
                 <h3>
                     <a href="http://www.360buy.com/digital.aspx">手机数码</a></h3>
                 <dl id="EFF_dl_1">
@@ -260,7 +154,8 @@
                                                                 href="http://www.360buy.com/products/652-828-873-0-0-0-0-0-0-0-1-1-1.html">高清播放器</a></span><span><a
                                                                     href="http://www.360buy.com/products/652-828-962-0-0-0-0-0-0-0-1-1-1.html">专业音频</a></span><span><a
                                                                         href="http://www.360buy.com/products/652-828-978-0-0-0-0-0-0-0-1-1-1.html">娱乐设备</a></span><span><a
-                                                                            href="http://www.360buy.com/products/652-828-1093-0-0-0-0-0-0-0-1-1-1.html">数字电视</a></span></dd></dl>
+                                                                            href="http://www.360buy.com/products/652-828-1093-0-0-0-0-0-0-0-1-1-1.html">数字电视</a></span></dd>
+                </dl>
                 <h3>
                     <a href="http://www.360buy.com/computer.aspx">电脑产品</a></h3>
                 <dl id="EFF_dl_2">
@@ -339,7 +234,8 @@
                                     href="http://www.360buy.com/products/670-729-732-0-0-0-0-0-0-0-1-1-1.html">墨粉</a></span><span><a
                                         href="http://www.360buy.com/products/670-729-733-0-0-0-0-0-0-0-1-1-1.html">色带</a></span><span><a
                                             href="http://www.360buy.com/products/670-729-735-0-0-0-0-0-0-0-1-1-1.html">光盘附件</a></span><span><a
-                                                href="http://www.360buy.com/products/670-729-736-0-0-0-0-0-0-0-1-1-1.html">纸类</a></span></dd></dl>
+                                                href="http://www.360buy.com/products/670-729-736-0-0-0-0-0-0-0-1-1-1.html">纸类</a></span></dd>
+                </dl>
                 <h3>
                     <a href="http://www.360buy.com/jdlife.aspx">日用百货</a></h3>
                 <dl id="EFF_dl_3">
@@ -454,13 +350,11 @@
                                                 href="http://www.360buy.com/products/911-928-954-0-0-0-0-0-0-0-1-1-1.html">遥控玩具</a></span><span><a
                                                     href="http://www.360buy.com/products/911-928-958-0-0-0-0-0-0-0-1-1-1.html">育儿玩具/童车</a></span><span><a
                                                         href="http://www.360buy.com/products/911-928-960-0-0-0-0-0-0-0-1-1-1.html">乐器</a></span><span><a
-                                                            href="http://www.360buy.com/products/911-928-1096-0-0-0-0-0-0-0-1-1-1.html">户外玩具</a></span></dd></dl>
+                                                            href="http://www.360buy.com/products/911-928-1096-0-0-0-0-0-0-0-1-1-1.html">户外玩具</a></span></dd>
+                </dl>
                 <div class="viewall">
                     <a class="link_1" href="http://www.360buy.com/special.aspx?id=5" target="_blank">全部商品&gt;&gt;</a></div>
             </div>
-
- 
-
             <div id="Store_Link">
                 <h2>
                     品牌专卖店</h2>
@@ -485,8 +379,7 @@
                     <li><a href="http://market.360buy.com/zhuanmai/creative/creative.aspx" target="_blank">
                         <img alt="创新" src="images/Button_pp_cre.jpg"></a></li>
                     <li><a href="http://market.360buy.com/zhuanmai/nokia/index.aspx" target="_blank">
-                        <img alt="诺基亚配件专卖店" src="images/PP_Logo_33.gif" width="88"
-                            height="31"></a></li>
+                        <img alt="诺基亚配件专卖店" src="images/PP_Logo_33.gif" width="88" height="31"></a></li>
                     <li><a href="http://market.360buy.com/zhuanmai/joyoung/index.aspx" target="_blank">
                         <img alt="九阳" src="images/Button_pp_joyoung.jpg"></a></li>
                     <li><a href="http://allyesbjafa.allyes.com/main/adfclick?db=allyesbjafa&amp;bid=161270,77631,329&amp;cid=79729,2421,1&amp;sid=155777&amp;show=ignore&amp;url=http://market.360buy.com/zhuanmai/fushi/index.aspx"
@@ -500,15 +393,16 @@
                     <li><a href="http://market.360buy.com/zhuanmai/ounanduo/index.aspx" target="_blank">
                         <img alt="欧南多" src="images/Button_pp_onondo.jpg"></a></li>
                     <li class="more">
-                        <img src="images/arr_more.gif"><a class="link_1"
-                            href="http://www.360buy.com/brand.aspx">更多&gt;&gt;</a></li></ul>
+                        <img src="images/arr_more.gif"><a class="link_1" href="http://www.360buy.com/brand.aspx">更多&gt;&gt;</a></li>
+                </ul>
             </div>
             <div class="column_zxpj">
                 <h2>
                     最热评价</h2>
                 <ul>
                     <li>
-                        <img style="margin: 0px auto" src="images/loading.gif"></li></ul>
+                        <img style="margin: 0px auto" src="images/loading.gif"></li>
+                </ul>
             </div>
             <div id="Research">
                 <h2>
@@ -560,15 +454,11 @@
                 <div id="Focus_Img">
                     <div id="Curr_image">
                         <img class="loading" src="images/loading.gif">
-
-                        
-
                     </div>
                 </div>
                 <div id="ScareBuying">
                     <h2>
-                        <img alt="疯狂抢购" src="images/column_fcqg.jpg" width="122"
-                            height="27"></h2>
+                        <img alt="疯狂抢购" src="images/column_fcqg.jpg" width="122" height="27"></h2>
                     <div class="Product_List_S3">
                         <ul>
                             <li>
@@ -582,7 +472,8 @@
                                         京东价：<em>￥3999.00</em></dd>
                                     <dd class="p_Name">
                                         <a onclick="setWebBILinkCount('index_crazy_left')" href="http://www.360buy.com/product/166869.html"
-                                            target="_blank">东芝（TOSHIBA）L515-14英寸宽屏笔记本 （T4200 2G 250G D刻 独显 摄像头 eSATA vista）</a></dd></dl>
+                                            target="_blank">东芝（TOSHIBA）L515-14英寸宽屏笔记本 （T4200 2G 250G D刻 独显 摄像头 eSATA vista）</a></dd>
+                                </dl>
                             </li>
                             <li>
                                 <dl>
@@ -595,7 +486,8 @@
                                         京东价：<em>￥1399.00</em></dd>
                                     <dd class="p_Name">
                                         <a onclick="setWebBILinkCount('index_crazy_center')" href="http://www.360buy.com/product/162858.html"
-                                            target="_blank">索尼爱立信（Sony Ericsson）W595C GSM手机（蜜桃粉）最新震撼价1399！48小时抢购！</a></dd></dl>
+                                            target="_blank">索尼爱立信（Sony Ericsson）W595C GSM手机（蜜桃粉）最新震撼价1399！48小时抢购！</a></dd>
+                                </dl>
                             </li>
                             <li>
                                 <dl>
@@ -608,7 +500,8 @@
                                         京东价：<em>￥6199.00</em></dd>
                                     <dd class="p_Name">
                                         <a onclick="setWebBILinkCount('index_crazy_right')" href="http://www.360buy.com/product/163377.html"
-                                            target="_blank">夏普（AQUOS）40英寸 高清液晶电视 LCD-40Z660A 六小时限时抢购中</a></dd></dl>
+                                            target="_blank">夏普（AQUOS）40英寸 高清液晶电视 LCD-40Z660A 六小时限时抢购中</a></dd>
+                                </dl>
                             </li>
                         </ul>
                     </div>
@@ -628,7 +521,8 @@
                                             target="_blank">希捷1TB 高清存储专家 特价抢购！</a></dd>
                                     <dd>
                                         ·<a title="英特尔酷睿i5四核处理器 超值1599元！" onclick="setWebBILinkCount('index_crazy_p22')"
-                                            href="http://www.360buy.com/product/174863.html" target="_blank">英特尔酷睿i5四核处理器 超值1599元！</a></dd></dl>
+                                            href="http://www.360buy.com/product/174863.html" target="_blank">英特尔酷睿i5四核处理器 超值1599元！</a></dd>
+                                </dl>
                             </li>
                             <li>
                                 <dl>
@@ -644,7 +538,8 @@
                                             target="_blank">销量最好的单反相机 低价抢购</a></dd>
                                     <dd>
                                         ·<a title="热销手机打折让利回馈专场！" onclick="setWebBILinkCount('index_crazy_p22')" href="http://market.360buy.com/ShopCampaign/Activities.aspx?hid=989"
-                                            target="_blank"><font color="#ff0000">热销手机打折让利回馈专场！</font></a></dd></dl>
+                                            target="_blank"><font color="#ff0000">热销手机打折让利回馈专场！</font></a></dd>
+                                </dl>
                             </li>
                             <li>
                                 <dl>
@@ -660,7 +555,8 @@
                                             target="_blank"><font color="#ff0000">平板电视优惠专区</font></a></dd>
                                     <dd>
                                         ·<a title="重阳佳节送健康：特价欧姆龙血压计" onclick="setWebBILinkCount('index_crazy_p22')" href="http://www.360buy.com/product/179197.html"
-                                            target="_blank">重阳佳节送健康：特价欧姆龙血压计</a></dd></dl>
+                                            target="_blank">重阳佳节送健康：特价欧姆龙血压计</a></dd>
+                                </dl>
                             </li>
                             <li>
                                 <dl>
@@ -676,7 +572,8 @@
                                             target="_blank">微软精巧500黑色键鼠套装99元抢购啦！</a></dd>
                                     <dd>
                                         ·<a title="冠捷23寸显示器2391V劲爆特价999元！" onclick="setWebBILinkCount('index_crazy_p22')"
-                                            href="http://www.360buy.com/product/176506.html" target="_blank"><font color="#ff0000">冠捷23寸显示器2391V劲爆特价999元！</font></a></dd></dl>
+                                            href="http://www.360buy.com/product/176506.html" target="_blank"><font color="#ff0000">冠捷23寸显示器2391V劲爆特价999元！</font></a></dd>
+                                </dl>
                             </li>
                             <li>
                                 <dl>
@@ -692,7 +589,8 @@
                                             target="_blank">铁三角ON300耳机首发！火热预售！</a></dd>
                                     <dd>
                                         ·<a title="高清DVD家庭影院(带您走入清晰的世界)" onclick="setWebBILinkCount('index_crazy_p22')" href="http://market.360buy.com/ShopCampaign/Activities.aspx?hid=744"
-                                            target="_blank">高清DVD家庭影院(带您走入清晰的世界)</a></dd></dl>
+                                            target="_blank">高清DVD家庭影院(带您走入清晰的世界)</a></dd>
+                                </dl>
                             </li>
                             <li>
                                 <dl>
@@ -738,8 +636,8 @@
                         <li>·<a onclick="setWebBILinkCount('index_news_all')" href="http://market.360buy.com/ShopCampaign/Activities.aspx?hid=992"
                             target="_blank">国货当自强 冰洗大促销！</a> </li>
                         <li class="more">
-                            <img src="images/arr_more.gif"><a class="link_1"
-                                href="http://www.360buy.com/moreSubject.aspx">更多&gt;&gt;</a> </li>
+                            <img src="images/arr_more.gif"><a class="link_1" href="http://www.360buy.com/moreSubject.aspx">更多&gt;&gt;</a>
+                        </li>
                     </ul>
                 </div>
                 <div id="Sale" class="jdtex">
@@ -754,7 +652,8 @@
                                     <a href="http://www.360buy.com/product/172384.html" target="_blank">戴尔（DELL）新版SK8115键盘
                                         旭丽代工 行货DELL全国联保</a></dd>
                                 <dd class="p_Price">
-                                    京东价：￥<em>45.00</em></dd></dl>
+                                    京东价：￥<em>45.00</em></dd>
+                            </dl>
                         </li>
                         <li>·<a href="http://www.360buy.com/product/175946.html" target="_blank">美的（Midea）空气加湿器
                             S20U-M（米宝宝）</a></li>
@@ -768,8 +667,8 @@
                         <li>·<a href="http://www.360buy.com/product/176130.html" target="_blank">联想（Lenovo)IdeaPad
                             Y450A-TSI 14.0英寸笔记本电脑（T6600 2G 320G GT 240M 512M独显 蓝牙）白色</a></li>
                         <li class="more">
-                            <img src="images/arr_more.gif"><a class="link_1"
-                                href="http://www.360buy.com/special.aspx?id=4&amp;cid=0">更多&gt;&gt;</a></li></ul>
+                            <img src="images/arr_more.gif"><a class="link_1" href="http://www.360buy.com/special.aspx?id=4&amp;cid=0">更多&gt;&gt;</a></li>
+                    </ul>
                 </div>
                 <!--拍卖区域-->
             </div>
@@ -778,8 +677,7 @@
             <div id="NewProduct" class="float_Left">
                 <h2>
                     <em><a class="link_1" onclick="setWebBILinkCount('index_newproduct_more')" href="http://www.360buy.com/special.aspx?id=2&amp;cid=0">
-                        更多新品&gt;&gt;</a></em><img alt="新品上架" src="images/column_xpsj.jpg"
-                            width="122" height="27"></h2>
+                        更多新品&gt;&gt;</a></em><img alt="新品上架" src="images/column_xpsj.jpg" width="122" height="27"></h2>
                 <div class="Product_List_S3">
                     <ul>
                         <li>
@@ -792,7 +690,8 @@
                                         target="_blank">联想（Lenovo）R510 1U机架式服务器（至强新四核E5410，4*2G内存，4*500G硬盘，CD光驱，RAID卡）<font
                                             color="#ff0000"></font></a></dd>
                                 <dd class="p_Price">
-                                    京东价：<em>￥13100.00</em></dd></dl>
+                                    京东价：<em>￥13100.00</em></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -804,7 +703,8 @@
                                         target="_blank">索尼（SONY）VPCCW18FC/W 14.0英寸宽屏笔记本电脑（白色）P8700 4G 500G GT 230M 512M独立显卡<font
                                             color="#ff0000">正版Windows 7 索尼强势产品线火爆预定中！</font></a></dd>
                                 <dd class="p_Price">
-                                    京东价：<em>￥7599.00</em></dd></dl>
+                                    京东价：<em>￥7599.00</em></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -816,7 +716,8 @@
                                         target="_blank">索尼（SONY）VPCCW18FC/R 14.0英寸宽屏笔记本电脑（红色）P8700 4G 500G GT 230M 512M独立显卡<font
                                             color="#ff0000">正版Windows 7 索尼强势产品线火爆预定中！</font></a></dd>
                                 <dd class="p_Price">
-                                    京东价：<em>￥7599.00</em></dd></dl>
+                                    京东价：<em>￥7599.00</em></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -828,7 +729,8 @@
                                         target="_blank">索尼（SONY）VPCCW18FC/P 14.0英寸宽屏笔记本电脑（粉色） P8700 4G 500G GT 230M 512M独立显卡<font
                                             color="#ff0000">正版Windows 7 索尼强势产品线火爆预定中！</font></a></dd>
                                 <dd class="p_Price">
-                                    京东价：<em>￥7599.00</em></dd></dl>
+                                    京东价：<em>￥7599.00</em></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -840,7 +742,8 @@
                                         target="_blank">索尼（SONY）VPCCW18FC/B 14.0英寸宽屏笔记本电脑（黑色） P8700 4G 500G GT 230M 512M独立显卡<font
                                             color="#ff0000">正版Windows 7 索尼强势产品线火爆预定中！</font></a></dd>
                                 <dd class="p_Price">
-                                    京东价：<em>￥7599.00</em></dd></dl>
+                                    京东价：<em>￥7599.00</em></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -852,7 +755,8 @@
                                         target="_blank">索尼（SONY）VPCCW15EC/WU 14.0英寸宽屏笔记本电脑（哑光白）T4300 2G 250G G210M 256M独立显卡<font
                                             color="#ff0000">正版Windows 7 新模具，新概念，新普及！</font></a></dd>
                                 <dd class="p_Price">
-                                    京东价：<em>￥5099.00</em></dd></dl>
+                                    京东价：<em>￥5099.00</em></dd>
+                            </dl>
                         </li>
                     </ul>
                 </div>
@@ -878,13 +782,11 @@
             </div>
             <h2 class="tjzq margin_b6">
                 <em><a class="link_1" href="http://www.360buy.com/special.aspx?id=22,21,23,117">全部特价商品&gt;&gt;</a></em><img
-                    alt="特价专区" src="images/column_tjzq.jpg" width="122"
-                    height="27"></h2>
+                    alt="特价专区" src="images/column_tjzq.jpg" width="122" height="27"></h2>
             <div class="Special_Product float_Left">
                 <h2>
                     <div class="SP_cornor_left">
-                        <img alt="家用电器/日用百货" src="images/column_dq_bh.jpg"
-                            width="147" height="16">
+                        <img alt="家用电器/日用百货" src="images/column_dq_bh.jpg" width="147" height="16">
                     </div>
                     <div class="SP_cornor_right">
                         <em><a class="link_1" onclick="setWebBILinkCount('index_tejia1_more')" href="http://www.360buy.com/special.aspx?id=22,117">
@@ -902,7 +804,8 @@
                                     京东价：<em>￥<span>265.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia1_all')" href="http://www.360buy.com/product/166245.html"
-                                        target="_blank">健康之家好福气系列热浪足浴器 JM-9818<font color="#ff0000">~重阳佳节倍思亲，足浴馈礼孝心尽！！！~特价抢购中！！！</font></a></dd></dl>
+                                        target="_blank">健康之家好福气系列热浪足浴器 JM-9818<font color="#ff0000">~重阳佳节倍思亲，足浴馈礼孝心尽！！！~特价抢购中！！！</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -914,7 +817,8 @@
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia1_all')" href="http://www.360buy.com/product/158245.html"
                                         target="_blank">汤姆逊RCA E6 高清RMVB下载看播放器（支持迅雷下载）<font color="#ff0000">特价机型 Real高清视频 兼容RM/RMVB
-                                            支持RM8/RM9/RM10</font></a></dd></dl>
+                                            支持RM8/RM9/RM10</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -926,7 +830,8 @@
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia1_all')" href="http://www.360buy.com/product/141906.html"
                                         target="_blank">美的（Midea）欧式抽油烟机CXW-200-DT17S+嵌入式燃气灶JZ(12T)2-Q632（天然气）<font color="#ff0000">京东“专供”，超实惠套餐
-                                            此款套餐中的燃气灶不适合上海地区用户使用</font></a></dd></dl>
+                                            此款套餐中的燃气灶不适合上海地区用户使用</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -937,7 +842,8 @@
                                     京东价：<em>￥<span>266.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia1_all')" href="http://www.360buy.com/product/108444.html"
-                                        target="_blank">飞利浦（Philips）锋驰系列充电式防水电动剃须刀 HQ6070<font color="#ff0000">九九重阳之日，彰显阳刚之时！男人之选~佳节特价产品！抢购啦！！</font></a></dd></dl>
+                                        target="_blank">飞利浦（Philips）锋驰系列充电式防水电动剃须刀 HQ6070<font color="#ff0000">九九重阳之日，彰显阳刚之时！男人之选~佳节特价产品！抢购啦！！</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -948,7 +854,8 @@
                                     京东价：<em>￥<span>2699.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia1_all')" href="http://www.360buy.com/product/175790.html"
-                                        target="_blank">飞利浦（PHILIPS）DVD 家庭影院系统 HTS3373<font color="#ff0000">3378兄弟版超强性价比（凭京东发票可享受免费上门安装）</font></a></dd></dl>
+                                        target="_blank">飞利浦（PHILIPS）DVD 家庭影院系统 HTS3373<font color="#ff0000">3378兄弟版超强性价比（凭京东发票可享受免费上门安装）</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -959,7 +866,8 @@
                                     京东价：<em>￥<span>1498.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia1_all')" href="http://www.360buy.com/product/130240.html"
-                                        target="_blank">三洋（SANYO）智慧洗洗衣机 XQB60-M808<font color="#ff0000">新款！人工智能模糊控制，超静音！加赠洗衣机机罩！</font></a></dd></dl>
+                                        target="_blank">三洋（SANYO）智慧洗洗衣机 XQB60-M808<font color="#ff0000">新款！人工智能模糊控制，超静音！加赠洗衣机机罩！</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -970,7 +878,8 @@
                                     京东价：<em>￥<span>419.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia1_all')" href="http://www.360buy.com/product/158685.html"
-                                        target="_blank">九阳（joyoung）豆浆机 JYDZ-35<font color="#ff0000">赠价值199元九阳料理机 九九重阳买九阳 磨出豆浆长辈享！</font></a></dd></dl>
+                                        target="_blank">九阳（joyoung）豆浆机 JYDZ-35<font color="#ff0000">赠价值199元九阳料理机 九九重阳买九阳 磨出豆浆长辈享！</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -981,7 +890,8 @@
                                     京东价：<em>￥<span>119.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia1_all')" href="http://www.360buy.com/product/123504.html"
-                                        target="_blank">zippo打火机蝴蝶之恋24339<font color="#ff0000">男士精品，礼品首选！</font></a></dd></dl>
+                                        target="_blank">zippo打火机蝴蝶之恋24339<font color="#ff0000">男士精品，礼品首选！</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -992,7 +902,8 @@
                                     京东价：<em>￥<span>480.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia1_all')" href="http://www.360buy.com/product/110435.html"
-                                        target="_blank">卡西欧(Casio)Edifice系列男表EF-503D-1A<font color="#ff0000"> 大气！超值！限量！</font></a></dd></dl>
+                                        target="_blank">卡西欧(Casio)Edifice系列男表EF-503D-1A<font color="#ff0000"> 大气！超值！限量！</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1003,7 +914,8 @@
                                     京东价：<em>￥<span>58.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia1_all')" href="http://www.360buy.com/product/182564.html"
-                                        target="_blank">古龙金属黑色框抗辐射眼镜特价款<font color="#ff0000">10月份促销单品58元仅500副！优秀品质！超低价格！</font></a></dd></dl>
+                                        target="_blank">古龙金属黑色框抗辐射眼镜特价款<font color="#ff0000">10月份促销单品58元仅500副！优秀品质！超低价格！</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1014,7 +926,8 @@
                                     京东价：<em>￥<span>39.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia1_all')" href="http://www.360buy.com/product/173828.html"
-                                        target="_blank">舞状元USB跳舞毯（EVA）<font color="#ff0000">再次回归疯狂价格！！</font></a></dd></dl>
+                                        target="_blank">舞状元USB跳舞毯（EVA）<font color="#ff0000">再次回归疯狂价格！！</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1025,7 +938,8 @@
                                     京东价：<em>￥<span>259.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia1_all')" href="http://www.360buy.com/product/176415.html"
-                                        target="_blank">喜鸽16寸炫彩折叠自行车(颜色随机)<font color="#ff0000">尾货出清！快枪！</font></a></dd></dl>
+                                        target="_blank">喜鸽16寸炫彩折叠自行车(颜色随机)<font color="#ff0000">尾货出清！快枪！</font></a></dd>
+                            </dl>
                         </li>
                     </ul>
                 </div>
@@ -1051,7 +965,8 @@
                                 <li id="EFF_electronic_Option_0" class="curr" onmouseover="SwitchTab('EFF_electronic_',0,3)">
                                     大家电</li>
                                 <li id="EFF_electronic_Option_1" onmouseover="SwitchTab('EFF_electronic_',1,3)">厨房电器</li>
-                                <li id="EFF_electronic_Option_2" onmouseover="SwitchTab('EFF_electronic_',2,3)">个人护理</li></ul>
+                                <li id="EFF_electronic_Option_2" onmouseover="SwitchTab('EFF_electronic_',2,3)">个人护理</li>
+                            </ul>
                         </div>
                         <div id="EFF_electronic_Con" class="Rank_Sale_List">
                             <ul id="EFF_electronic_Con_0" class="default">
@@ -1150,7 +1065,8 @@
                             <ul id="EFF_daily_Option">
                                 <li id="EFF_daily_Option_0" class="curr" onmouseover="SwitchTab('EFF_daily_',0,3)">家居用品</li>
                                 <li id="EFF_daily_Option_1" onmouseover="SwitchTab('EFF_daily_',1,3)">钟表首饰</li>
-                                <li id="EFF_daily_Option_2" onmouseover="SwitchTab('EFF_daily_',2,3)">礼品箱包</li></ul>
+                                <li id="EFF_daily_Option_2" onmouseover="SwitchTab('EFF_daily_',2,3)">礼品箱包</li>
+                            </ul>
                         </div>
                         <div id="EFF_daily_Con" class="Rank_Sale_List">
                             <ul id="EFF_daily_Con_0" class="default">
@@ -1236,8 +1152,7 @@
             <div class="Special_Product float_Left">
                 <h2>
                     <div class="SP_cornor_left">
-                        <img alt="电脑产品/手机数码" src="images/column_dl_sm.jpg"
-                            width="147" height="16">
+                        <img alt="电脑产品/手机数码" src="images/column_dl_sm.jpg" width="147" height="16">
                     </div>
                     <div class="SP_cornor_right">
                         <em><a class="link_1" onclick="setWebBILinkCount('index_tejia2_more')" href="http://www.360buy.com/special.aspx?id=21,23">
@@ -1255,7 +1170,8 @@
                                     京东价：<em>￥<span>259.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia2_all')" href="http://www.360buy.com/product/162828.html"
-                                        target="_blank">漫步者 Edifier R1200T 2.0音箱<font color="#ff0000">R1000t经典传承！</font></a></dd></dl>
+                                        target="_blank">漫步者 Edifier R1200T 2.0音箱<font color="#ff0000">R1000t经典传承！</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1266,7 +1182,8 @@
                                     京东价：<em>￥<span>639.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia2_all')" href="http://www.360buy.com/product/129396.html"
-                                        target="_blank">摩托罗拉（Motorola）A810 GSM手机 黑色<font color="#ff0000">（联通定制机）送双重好礼！linux系统，2.2英寸触摸屏，3.5mm插孔。FM，200w摄像头，蓝牙！</font></a></dd></dl>
+                                        target="_blank">摩托罗拉（Motorola）A810 GSM手机 黑色<font color="#ff0000">（联通定制机）送双重好礼！linux系统，2.2英寸触摸屏，3.5mm插孔。FM，200w摄像头，蓝牙！</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1277,7 +1194,8 @@
                                     京东价：<em>￥<span>870.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia2_all')" href="http://www.360buy.com/product/155530.html"
-                                        target="_blank">艾利和（iriver）P7 8G MP4播放器（银色）<font color="#ff0000"></font></a></dd></dl>
+                                        target="_blank">艾利和（iriver）P7 8G MP4播放器（银色）<font color="#ff0000"></font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1288,7 +1206,8 @@
                                     京东价：<em>￥<span>2268.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia2_all')" href="http://www.360buy.com/product/173838.html"
-                                        target="_blank">诺基亚（NOKIA） 5800i XpressMusic 3G 手机（银黑色）WCDMA/GSM<font color="#ff0000"></font></a></dd></dl>
+                                        target="_blank">诺基亚（NOKIA） 5800i XpressMusic 3G 手机（银黑色）WCDMA/GSM<font color="#ff0000"></font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1299,7 +1218,8 @@
                                     京东价：<em>￥<span>99.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia2_all')" href="http://www.360buy.com/product/170511.html"
-                                        target="_blank">万信达（WXD）数码摄像机包SM98544<font color="#ff0000">摄包低价促销，一般小型摄像机均可使用！</font></a></dd></dl>
+                                        target="_blank">万信达（WXD）数码摄像机包SM98544<font color="#ff0000">摄包低价促销，一般小型摄像机均可使用！</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1311,7 +1231,8 @@
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia2_all')" href="http://www.360buy.com/product/118340.html"
                                         target="_blank">惠普（HP）LaserJet M1005 黑白激光一体机（打印 复印 扫描）<font color="#ff0000">送50元京券 特价抢购
-                                            经典机型超强三合一</font></a></dd></dl>
+                                            经典机型超强三合一</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1322,7 +1243,8 @@
                                     京东价：<em>￥<span>588.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia2_all')" href="http://www.360buy.com/product/177763.html"
-                                        target="_blank">朗科（Netac）2.5英寸K188移动硬盘500GB<font color="#ff0000"></font></a></dd></dl>
+                                        target="_blank">朗科（Netac）2.5英寸K188移动硬盘500GB<font color="#ff0000"></font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1334,7 +1256,8 @@
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia2_all')" href="http://www.360buy.com/product/177036.html"
                                         target="_blank">戴尔（DELL）Vostro1088 14.0寸宽屏笔记本电脑 （T5670 1G 160G 512M独显 D刻 蓝牙 摄像头）黑色<font
-                                            color="#ff0000">送14寸电脑包！新品上市，独显高配版</font></a></dd></dl>
+                                            color="#ff0000">送14寸电脑包！新品上市，独显高配版</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1346,7 +1269,8 @@
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia2_all')" href="http://www.360buy.com/product/166066.html"
                                         target="_blank">AMD Athlon II ×2（速龙II双核）245盒装CPU（Socket AM3/2.9GHz/2M二级缓存/45纳米）<font
-                                            color="#ff0000">AMD 45纳米 速龙2代 领先上市</font></a></dd></dl>
+                                            color="#ff0000">AMD 45纳米 速龙2代 领先上市</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1359,7 +1283,8 @@
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia2_all')" href="http://www.360buy.com/product/169411.html"
                                         target="_blank">ThinkPad SL400（2743-2GC）14.1英寸笔记本电脑（T6670 3G 320G 独显256M 摄像头 读卡器
-                                        RAMBO）<font color="#ff0000">赠200元京券+原装包！数量有限，机会难得！</font></a></dd></dl>
+                                        RAMBO）<font color="#ff0000">赠200元京券+原装包！数量有限，机会难得！</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1370,7 +1295,8 @@
                                     京东价：<em>￥<span>899.00</span></em></dd>
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia2_all')" href="http://www.360buy.com/product/165354.html"
-                                        target="_blank">钻石（DFI）LP LT X48-T2R主板（INTEL X48/LGA 775）<font color="#ff0000">八相数字供电，全固态电容，含热管北桥散热器!</font></a></dd></dl>
+                                        target="_blank">钻石（DFI）LP LT X48-T2R主板（INTEL X48/LGA 775）<font color="#ff0000">八相数字供电，全固态电容，含热管北桥散热器!</font></a></dd>
+                            </dl>
                         </li>
                         <li>
                             <dl>
@@ -1382,7 +1308,8 @@
                                 <dd class="p_Name">
                                     <a onclick="setWebBILinkCount('index_tejia2_all')" href="http://www.360buy.com/product/117592.html"
                                         target="_blank">佳能（Canon）腾彩PIXMA MX318 喷墨传真一体机（打印 复印 传真 扫描）<font color="#ff0000">标配输稿器
-                                            双色原装墨盒 最后一批</font></a></dd></dl>
+                                            双色原装墨盒 最后一批</font></a></dd>
+                            </dl>
                         </li>
                     </ul>
                 </div>
@@ -1408,7 +1335,8 @@
                                 <li id="EFF_computer_Option_0" class="curr" onmouseover="SwitchTab('EFF_computer_',0,3)">
                                     笔记本</li>
                                 <li id="EFF_computer_Option_1" onmouseover="SwitchTab('EFF_computer_',1,3)">核心配件</li>
-                                <li id="EFF_computer_Option_2" onmouseover="SwitchTab('EFF_computer_',2,3)">外设产品</li></ul>
+                                <li id="EFF_computer_Option_2" onmouseover="SwitchTab('EFF_computer_',2,3)">外设产品</li>
+                            </ul>
                         </div>
                         <div id="EFF_computer_Con" class="Rank_Sale_List">
                             <ul id="EFF_computer_Con_0" class="default">
@@ -1516,7 +1444,8 @@
                                 <li id="EFF_digital_Option_0" class="curr" onmouseover="SwitchTab('EFF_digital_',0,3)">
                                     手机通讯</li>
                                 <li id="EFF_digital_Option_1" onmouseover="SwitchTab('EFF_digital_',1,3)">时尚影音</li>
-                                <li id="EFF_digital_Option_2" onmouseover="SwitchTab('EFF_digital_',2,3)">数码影像</li></ul>
+                                <li id="EFF_digital_Option_2" onmouseover="SwitchTab('EFF_digital_',2,3)">数码影像</li>
+                            </ul>
                         </div>
                         <div id="EFF_digital_Con" class="Rank_Sale_List">
                             <ul id="EFF_digital_Con_0" class="default">
@@ -1558,6 +1487,7 @@
                                     （黑色）<font color="#ff0000"></font></a></strong> </li>
                                 <li><span>4</span><strong><a onclick="setWebBILinkCount('index_tejia2_top2')" href="http://www.360buy.com/product/139813.html">台电（teclast）X19+
                                     4G MP3播放器<font color="#ff0000">70小时超长待机 支持FM调频，送精美小鱼收线器！</font></a></strong>
+                                
                                 </li>
                                 <li><span>5</span><strong><a onclick="setWebBILinkCount('index_tejia2_top2')" href="http://www.360buy.com/product/143999.html">飞利浦（PHILIPS）SA2825
                                     2G MP3 播放器<font color="#ff0000">支持多种格式播放、支持FM、录音功能！</font></a></strong> </li>
@@ -1600,101 +1530,4 @@
             </div>
         </div>
     </div>
-
-    
-
-    <div class="Help">
-        <dl>
-            <dt>
-                <img alt="购物指南" src="images/help_gwzn.gif">
-                <dd>
-                    <a href="http://www.360buy.com/help/flow.aspx" target="_blank">购物流程</a>
-                    <dd>
-                        <a href="http://www.360buy.com/help/member.aspx" target="_blank">会员介绍</a>
-                        <dd>
-                            <a href="http://www.360buy.com/help/order.aspx" target="_blank">订单状态</a>
-                            <dd>
-                                <a href="http://www.360buy.com/help/faq.aspx" target="_blank">常见问题</a>
-                                <dd>
-                                    <a href="http://www.360buy.com/help/helectronic.aspx" target="_blank">大 家 电</a>
-                                    <dd>
-                                        <a href="http://www.360buy.com/help/callcenter.aspx" target="_blank">联系客服</a>
-                                    </dd>
-        </dl>
-        <dl>
-            <dt>
-                <img alt="配送方式" src="images/help_psfs.gif">
-                <dd>
-                    <a href="http://www.360buy.com/help/ziti.aspx" target="_blank">上门自提</a>
-                    <dd>
-                        <a href="http://www.360buy.com/help/kdexpress.aspx" target="_blank">快递运输</a>
-                        <dd>
-                            <a href="http://www.360buy.com/help/ems.aspx" target="_blank">特快专递(EMS)</a>
-                        </dd>
-        </dl>
-        <dl>
-            <dt>
-                <img alt="支付方式" src="images/help_zffs.gif">
-                <dd>
-                    <a href="http://www.360buy.com/help/cod.aspx" target="_blank">货到付款</a>
-                    <dd>
-                        <a href="http://www.360buy.com/help/onlinepay.aspx" target="_blank">在线支付</a>
-                        <dd>
-                            <a href="http://www.360buy.com/help/banktrans.aspx" target="_blank">银行转账</a>
-                            <dd>
-                                <a href="http://www.360buy.com/help/dividedpay.aspx" target="_blank">分期付款</a>
-                                <dd>
-                                    <a href="http://www.360buy.com/help/postage.aspx" target="_blank">邮局汇款</a>
-                                    <dd>
-                                        <a href="http://www.360buy.com/help/transfer.aspx" target="_blank">公司转账</a>
-                                    </dd>
-        </dl>
-        <dl>
-            <dt>
-                <img alt="售后服务" src="images/help_shfw.gif">
-                <dd>
-                    <a href="http://www.360buy.com/help/return_policy.aspx" target="_blank">退换货政策</a>
-                    <dd>
-                        <a href="http://www.360buy.com/help/return_flow.aspx" target="_blank">退换货流程</a>
-                        <dd>
-                            <a href="http://www.360buy.com/help/price.aspx" target="_blank">价格保护</a>
-                            <dd>
-                                <a href="http://www.360buy.com/help/refundment.aspx" target="_blank">退款说明</a>
-                            </dd>
-        </dl>
-        <dl class="Help_b5">
-            <dt>
-                <img alt="特色服务" src="images/help_tsfw.gif">
-                <dd>
-                    <a href="http://www.360buy.com/help/bid.aspx" target="_blank">商品拍卖</a>
-                    <dd>
-                        <a href="http://www.360buy.com/help/diy.aspx" target="_blank">DIY装机</a>
-                        <dd>
-                            <a href="http://market.360buy.com/hd/yanbao090702/ind.html" target="_blank"><font
-                                color="red">延保服务</font></a>
-                            <dd>
-                                <a href="http://www.360buy.com/help/visitservice.aspx" target="_blank">上门服务</a>
-                                <dd>
-                                    <a href="http://search.360buy.com/Search?keyword=diy上门" target="_blank">上门装机</a>
-                                    <dd>
-                                        <a href="http://market.360buy.com/giftcard/index.html" target="_blank">京东礼品卡</a>
-                                    </dd>
-        </dl>
-    </div>
-    <div class="Footer_Nav">
-        <a href="http://www.360buy.com/intro/about.aspx" target="_blank">关于我们</a>|<a href="http://www.360buy.com/contact/"
-            target="_blank">联系我们</a>|<a href="http://www.360buy.com/intro/service.aspx" target="_blank">广告服务</a>|<a
-                href="http://www.360buy.com/intro/job.aspx" target="_blank">人才招聘</a>|<a href="http://club.360buy.com/"
-                    target="_blank">京东社区</a>|<a href="http://club.360buy.com/allreview/1-1.html" target="_blank">商品评价</a>|<a
-                        href="http://club.360buy.com/links.aspx" target="_blank">友情链接</a></div>
-    <div class="Copyright">
-        北京市公安局海淀分局备案编号：1101081681&nbsp;&nbsp;<a class="icp" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202007080200026">京ICP证070359号</a><br>
-        Copyright&copy;2004-2009&nbsp;&nbsp;360buy京东商城&nbsp;&nbsp;版权所有<br>
-    </div>
-    <div class="Footer_Link">
-        <a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202007080200026" target="_blank">
-            <img alt="经营性网站备案中心" src="images/f_icp.gif"></a><a
-                href="https://tns-ssverify.cnnic.cn/verifyseal.dll?dn=www.360buy.com" target="_blank"><img
-                    alt="站点卫视" src="images/f_cnnic.gif"></a></div>
-</body>
-</html>
+</asp:Content>

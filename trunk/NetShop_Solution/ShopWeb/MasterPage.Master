@@ -1,0 +1,206 @@
+﻿<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="MasterPage.master.cs" EnableViewState="false" Inherits="ShopWeb.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>    
+</head>
+<body>
+    <div class="Header">
+        <div id="Logo">
+            <a href="http://www.360buy.com/">
+                <img alt="京东商城" src="images/logo.gif" width="167" height="46" /></a></div>
+        <div class="head_box1">
+            <div id="Tip">
+                <span id="vtip1">您好，欢迎来到京东商城！<span>想继续购物之旅？<a href="#">[请登录]</a>，新用户？<a href="#">[免费注册]</a></span></span></div>
+            <div id="MiniToolBar">
+                <ul>
+                    <li id="My360buy"><a target="_blank" href="http://jd2008.360buy.com/user_home.aspx">
+                        我的京东</a> </li>
+                    <li class="line">|</li>
+                    <li class="hsub">
+                        <dl id="ServiceCenter">
+                            <dt><a href="http://www.360buy.com/help/callcenter.aspx" target="_blank">客服中心</a></dt>
+                            <dd>
+                                <a href="http://jd2008.360buy.com/user_order.aspx" target="_blank">订单中心</a></dd>
+                            <dd>
+                                <a href="http://jd2008.360buy.com/user_cpfx.aspx" target="_blank">返修中心</a></dd>
+                            <dd>
+                                <a href="http://jd2008.360buy.com/complaint.aspx">投诉中心</a></dd>
+                        </dl>
+                    </li>
+                    <li class="line">|</li>
+                    <li><a href="http://diy.360buy.com/" target="_blank">装机大师</a> </li>
+                    <li class="line">|</li>
+                    <li class="lpk"><a href="http://market.360buy.com/giftcard/" target="_blank">礼品卡</a></li>
+                </ul>
+            </div>
+            <div class="clear">
+            </div>
+            <ul id="Nav">
+                <li class="curr"><span class="Nav_first"><a href="http://www.360buy.com/">首 页</a></span></li>
+                <li><span><a href="http://www.360buy.com/electronic.html">家用电器</a></span></li>
+                <li><span><a href="http://www.360buy.com/digital.html">手机数码</a></span></li>
+                <li><span><a href="http://www.360buy.com/computer.html">电脑产品</a></span></li>
+                <li><span><a href="http://www.360buy.com/jdlife.html">日用百货</a></span></li>
+            </ul>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="head_box2">
+            <div class="head_box2_left">
+            </div>
+            <div class="head_box2_right">
+            </div>
+            <div id="HotKeyword">
+                <strong>热门搜索：</strong><a href="http://search.360buy.com/Search?keyword=%D2%C6%B6%AF%D3%B2%C5%CC"
+                    target="_blank">移动硬盘</a><a href="http://search.360buy.com/Search?keyword=6010&cid=655"
+                        target="_blank">夏普6010</a><a href="http://search.360buy.com/Search?keyword=%BC%D1%C4%DC%CF%E0%BB%FA"
+                            target="_blank">佳能相机</a><a href="http://search.360buy.com/Search?keyword=%B5%E7%B7%E7%C9%C8"
+                                target="_blank">电风扇</a><a href="http://search.360buy.com/Search?keyword=U%C5%CC&cid=694"
+                                    target="_blank">U盘</a><a href="http://search.360buy.com/Search?keyword=%CD%BC%C0%BC%B6%E4"
+                                        target="_blank">图兰朵</a><a href="http://search.360buy.com/Search?keyword=%CC%EA%D0%EB%B5%B6"
+                                            target="_blank">剃须刀</a><a href="http://search.360buy.com/Search?keyword=%C8%F0%CA%BF%B1%ED"
+                                                target="_blank">瑞士表店</a><a href="http://search.360buy.com/Search?keyword=%C9%AD%BA%A3%C8%FB%B6%FB"
+                                                    target="_blank">森海塞尔</a><a href="http://search.360buy.com/Search?keyword=%CD%E0"
+                                                        target="_blank">袜子</a><a href="http://search.360buy.com/Search?keyword=N97" target="_blank">N97</a><a
+                                                            href="http://search.360buy.com/Search?keyword=%C9%CF%CD%F8%B1%BE" target="_blank">上网本</a><a
+                                                                href="http://search.360buy.com/Search?keyword=%C0%D6%BF%DB%C0%D6%BF%DB" target="_blank">乐扣</a><a
+                                                                    href="http://search.360buy.com/Search?keyword=%CE%FC%D3%CD%D1%CC%BB%FA&s=889&sname=%CE%FC%D3%CD%D1%CC%BB%FA&vm=true&sv=2"
+                                                                    target="_blank">吸油烟机</a><a href="http://search.360buy.com/Search?keyword=%BD%DC%CA%BF%B0%EE%B0%B2%C8%AB%CC%D7"
+                                                                        target="_blank">杰士邦安全套</a><a href="http://search.360buy.com/Search?keyword=3G%CE%DE%CF%DF%C9%CF%CD%F8%BF%A8"
+                                                                            target="_blank">3G无线上网</a>
+            </div>
+            <ul id="Search">
+                <li><strong>商品搜索：</strong></li>
+                <li class="S_input">
+                    <input onkeydown="javascript:if(event.keyCode==13) search('keyword');" id="keyword"
+                        class="S_input1" onclick="this.value='';this.style.color='#444444'" value="ThinkPad X200"
+                        autocomplete="off">
+                    <div id="Se_tip">
+                    </div>
+                </li>
+                <li class="S_go">
+                    <img class="S_input2" alt="searchs" onclick="search('keyword');return false;" src="images/search_submit.jpg" /></li>
+            </ul>
+            <ul id="Cart">
+                <li class="C_num">
+                    <div id="CartSwitch_wrap">
+                        <img id="CartSwitch" src="images/head3_18.gif" width="14" height="15" alt="Cart" /><a
+                            href="http://jd2008.360buy.com/purchase/shoppingcart.aspx">购物车有&nbsp; <strong id="ProductNum">
+                            </strong>&nbsp;件商品</a>
+                    </div>
+                </li>
+                <li class="C_bal"><a href="http://jd2008.360buy.com/purchase/ShoppingCart.aspx">去结算</a></li>
+                <li class="C_ord"><a href="http://jd2008.360buy.com/user_order.aspx">我的订单</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="MyCart">
+    </div>
+    <div id="My_Cart_Tip" class="Tip360">
+    </div>
+    <div id="Collect_Tip" class="Tip360 w260">
+    </div>
+    <div id="Fqfk_Tip" class="Tip360">
+    </div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+    </asp:ContentPlaceHolder>
+    <div class="Help">
+        <dl>
+            <dt>
+                <img alt="购物指南" src="images/help_gwzn.gif" /></dt>
+            <dd>
+                <a href="http://www.360buy.com/help/flow.aspx" target="_blank">购物流程</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/member.aspx" target="_blank">会员介绍</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/order.aspx" target="_blank">订单状态</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/faq.aspx" target="_blank">常见问题</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/helectronic.aspx" target="_blank">大 家 电</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/callcenter.aspx" target="_blank">联系客服</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <img alt="配送方式" src="images/help_psfs.gif" /></dt>
+            <dd>
+                <a href="http://www.360buy.com/help/ziti.aspx" target="_blank">上门自提</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/kdexpress.aspx" target="_blank">快递运输</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/ems.aspx" target="_blank">特快专递(EMS)</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <img alt="支付方式" src="images/help_zffs.gif" /></dt>
+            <dd>
+                <a href="http://www.360buy.com/help/cod.aspx" target="_blank">货到付款</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/onlinepay.aspx" target="_blank">在线支付</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/banktrans.aspx" target="_blank">银行转账</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/dividedpay.aspx" target="_blank">分期付款</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/postage.aspx" target="_blank">邮局汇款</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/transfer.aspx" target="_blank">公司转账</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <img alt="售后服务" src="images/help_shfw.gif" /></dt>
+            <dd>
+                <a href="http://www.360buy.com/help/return_policy.aspx" target="_blank">退换货政策</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/return_flow.aspx" target="_blank">退换货流程</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/price.aspx" target="_blank">价格保护</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/refundment.aspx" target="_blank">退款说明</a>
+            </dd>
+        </dl>
+        <dl class="Help_b5">
+            <dt>
+                <img alt="特色服务" src="images/help_tsfw.gif" /></dt>
+            <dd>
+                <a href="http://www.360buy.com/help/bid.aspx" target="_blank">商品拍卖</a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/diy.aspx" target="_blank">DIY装机</a></dd>
+            <dd>
+                <a href="http://market.360buy.com/hd/yanbao090702/ind.html" target="_blank"><font
+                    color="red">延保服务</font></a></dd>
+            <dd>
+                <a href="http://www.360buy.com/help/visitservice.aspx" target="_blank">上门服务</a></dd>
+            <dd>
+                <a href="http://search.360buy.com/Search?keyword=diy上门" target="_blank">上门装机</a></dd>
+            <dd>
+                <a href="http://market.360buy.com/giftcard/index.html" target="_blank">京东礼品卡</a>
+            </dd>
+        </dl>
+    </div>
+    <div class="Footer_Nav">
+        <a href="http://www.360buy.com/intro/about.aspx" target="_blank">关于我们</a>|<a href="http://www.360buy.com/contact/"
+            target="_blank">联系我们</a>|<a href="http://www.360buy.com/intro/service.aspx" target="_blank">广告服务</a>|<a
+                href="http://www.360buy.com/intro/job.aspx" target="_blank">人才招聘</a>|<a href="http://club.360buy.com/"
+                    target="_blank">京东社区</a>|<a href="http://club.360buy.com/allreview/1-1.html" target="_blank">商品评价</a>|<a
+                        href="http://club.360buy.com/links.aspx" target="_blank">友情链接</a></div>
+    <div class="Copyright">
+        北京市公安局海淀分局备案编号：1101081681&nbsp;&nbsp;<a class="icp" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202007080200026">京ICP证070359号</a><br>
+        Copyright&copy;2004-2009&nbsp;&nbsp;360buy京东商城&nbsp;&nbsp;版权所有<br>
+    </div>
+    <div class="Footer_Link">
+        <a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202007080200026" target="_blank">
+            <img alt="经营性网站备案中心" src="images/f_icp.gif" /></a> <a href="https://tns-ssverify.cnnic.cn/verifyseal.dll?dn=www.360buy.com"
+                target="_blank">
+                <img alt="站点卫视" src="images/f_cnnic.gif" /></a>
+    </div>
+</body>
+</html>

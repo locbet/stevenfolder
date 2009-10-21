@@ -10,9 +10,10 @@ namespace ShopWeb
 {
     public partial class Electronic : BasePage
     {
-        protected override void ProcessPage()
+
+        protected override void PageLoad(EventArgs e)
         {
-            
+           
         }
     }
 }
