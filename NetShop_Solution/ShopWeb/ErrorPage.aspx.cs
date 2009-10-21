@@ -10,10 +10,9 @@ namespace ShopWeb
 {
     public partial class ErrorPage : BasePage
     {
-
-        protected override void PageLoad(EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
-            throw new NotImplementedException();
+            base.OnLoad(e);
         }
     }
 }
