@@ -1,12 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="false" CodeBehind="Search.aspx.cs" Inherits="ShopWeb.Search" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
-    <%=ShowHeader() %>
-    <%=ShowFooter() %>
-</body>
-</html>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="false" CodeBehind="Search.aspx.cs" Inherits="ShopWeb.Search" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
+</asp:Content>

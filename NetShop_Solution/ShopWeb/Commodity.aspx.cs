@@ -8,11 +8,11 @@ using ShopWeb._WebUI;
 
 namespace ShopWeb
 {
-    public partial class Commodity :BasePage
+    public partial class Commodity : BasePage
     {
-        protected override void ProcessPage()
+        protected override void PageLoad(EventArgs e)
         {
-            
+
         }
     }
 }
