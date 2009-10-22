@@ -1,0 +1,5 @@
+E:\SourceCode\NetShop_Solution\Entity\bin\Debug\Entity.dll
+E:\SourceCode\NetShop_Solution\Entity\bin\Debug\Entity.pdb
+E:\SourceCode\NetShop_Solution\Entity\obj\Debug\ResolveAssemblyReference.cache
+E:\SourceCode\NetShop_Solution\Entity\obj\Debug\Entity.dll
+E:\SourceCode\NetShop_Solution\Entity\obj\Debug\Entity.pdb

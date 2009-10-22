@@ -42,10 +42,7 @@
             </div>
             <ul id="Nav">
                 <li class="curr"><span class="Nav_first"><a href="http://www.360buy.com/">首 页</a></span></li>
-                <li><span><a href="http://www.360buy.com/electronic.html">家用电器</a></span></li>
                 <li><span><a href="http://www.360buy.com/digital.html">手机数码</a></span></li>
-                <li><span><a href="http://www.360buy.com/computer.html">电脑产品</a></span></li>
-                <li><span><a href="http://www.360buy.com/jdlife.html">日用百货</a></span></li>
             </ul>
         </div>
         <div class="clear">
@@ -79,7 +76,7 @@
                 <li class="S_input">
                     <input onkeydown="javascript:if(event.keyCode==13) search('keyword');" id="keyword"
                         class="S_input1" onclick="this.value='';this.style.color='#444444'" value="ThinkPad X200"
-                        autocomplete="off">
+                        autocomplete="off"/>
                     <div id="Se_tip">
                     </div>
                 </li>

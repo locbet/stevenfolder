@@ -1,0 +1,5 @@
+E:\SourceCode\NetShop_Solution\DataCore\bin\Debug\DataCore.dll
+E:\SourceCode\NetShop_Solution\DataCore\bin\Debug\DataCore.pdb
+E:\SourceCode\NetShop_Solution\DataCore\obj\Debug\ResolveAssemblyReference.cache
+E:\SourceCode\NetShop_Solution\DataCore\obj\Debug\DataCore.dll
+E:\SourceCode\NetShop_Solution\DataCore\obj\Debug\DataCore.pdb
