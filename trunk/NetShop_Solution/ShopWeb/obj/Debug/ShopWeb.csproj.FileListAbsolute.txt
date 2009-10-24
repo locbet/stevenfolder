@@ -4,3 +4,9 @@ E:\SourceCode\NetShop_Solution\ShopWeb\obj\Debug\ResolveAssemblyReference.cache
 E:\SourceCode\NetShop_Solution\ShopWeb\obj\Debug\ShopWeb.dll
 E:\SourceCode\NetShop_Solution\ShopWeb\obj\Debug\ShopWeb.pdb
 E:\SourceCode\NetShop_Solution\ShopWeb\bin\log4net.dll
+D:\stevenfolder\NetShop_Solution\ShopWeb\bin\ShopWeb.dll
+D:\stevenfolder\NetShop_Solution\ShopWeb\bin\ShopWeb.pdb
+D:\stevenfolder\NetShop_Solution\ShopWeb\bin\log4net.dll
+D:\stevenfolder\NetShop_Solution\ShopWeb\obj\Debug\ResolveAssemblyReference.cache
+D:\stevenfolder\NetShop_Solution\ShopWeb\obj\Debug\ShopWeb.dll
+D:\stevenfolder\NetShop_Solution\ShopWeb\obj\Debug\ShopWeb.pdb

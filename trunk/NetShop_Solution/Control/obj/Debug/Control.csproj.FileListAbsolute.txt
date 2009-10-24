@@ -3,3 +3,8 @@ E:\SourceCode\NetShop_Solution\Control\bin\Debug\Control.pdb
 E:\SourceCode\NetShop_Solution\Control\obj\Debug\ResolveAssemblyReference.cache
 E:\SourceCode\NetShop_Solution\Control\obj\Debug\Control.dll
 E:\SourceCode\NetShop_Solution\Control\obj\Debug\Control.pdb
+D:\stevenfolder\NetShop_Solution\Control\bin\Debug\Control.dll
+D:\stevenfolder\NetShop_Solution\Control\bin\Debug\Control.pdb
+D:\stevenfolder\NetShop_Solution\Control\obj\Debug\ResolveAssemblyReference.cache
+D:\stevenfolder\NetShop_Solution\Control\obj\Debug\Control.dll
+D:\stevenfolder\NetShop_Solution\Control\obj\Debug\Control.pdb

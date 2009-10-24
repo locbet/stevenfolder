@@ -1,0 +1,52 @@
+//argument start
+var F_delay=5;
+var F_timer=null;
+var F_img=null;
+var F_temp_count=1;
+var F_photos=[	
+["http://www.360buy.com/images/digital/pic/jd_digital_152.jpg","","http://market.360buy.com/hd/jnfb091020/index.htm",
+"http://www.360buy.com/images/digital/pic/jd_digital_w_152.jpg"],
+["http://www.360buy.com/images/digital/pic/jd_digital_151.jpg","","http://market.360buy.com/ShopCampaign/Activities.aspx?hid=1001",
+"http://www.360buy.com/images/digital/pic/jd_digital_w_151.jpg"],
+["http://www.360buy.com/images/digital/pic/jd_digital_150.jpg","","http://www.360buy.com/product/177170.html ",
+"http://www.360buy.com/images/digital/pic/jd_digital_w_150.jpg"],
+["http://www.360buy.com/images/digital/pic/jd_digital_149.jpg","","http://www.360buy.com/product/177556.html",
+"http://www.360buy.com/images/digital/pic/jd_digital_w_149.jpg"]
+];
+var preload=new Array();
+for (var i=0;i<F_photos.length;i++){
+	preload[i]=new Image();
+	if (Swidth>=1280){preload[i].src=F_photos[i][3];}
+	else{preload[i].src=F_photos[i][0];}
+	preload[i].alt=F_photos[i][1];
+}
+function strartSlideshow(){
+	var imgbarHTML="";
+	imgbarHTML+="<ul id='button_image'>";
+	for (var i=0;i<F_photos.length;i++){imgbarHTML+="<li id='i"+ i +"'><a href='"+ F_photos[i][2] +"' target='_blank'>"+ (i+1) +"</a></li>"}
+	imgbarHTML+="</ul>";
+	OOO("Focus_Img").innerHTML+=imgbarHTML;
+	OOO("Curr_image").innerHTML="<a href='"+ F_photos[0][2] +"' target='_blank'><img src='"+ preload[0].src +"' alt='"+ preload[0].alt +"' class='photo' style='filter:revealtrans(duration=2,transition=23)' /></a>";
+	OOO("button_image","li")[0].className="curr";
+	F_img=OOO("Curr_image","img")[0];
+	F_timer=setTimeout("cueNextSlide(1)",F_delay*1000);
+	for (var i=0;i<F_photos.length;i++){OOO("button_image","li")[i].onmouseover=function(){clearTimeout(F_timer);cueNextSlide(this.id.substr(1,1));clearTimeout(F_timer);};OOO("button_image","li")[i].onmouseout=function(){F_timer=setTimeout("cueNextSlide("+F_temp_count+")",F_delay*1000);};};
+	F_img.onmouseover=function(){clearTimeout(F_timer)};
+	F_img.onmouseout=function(){F_timer=setTimeout("cueNextSlide("+F_temp_count+")",F_delay*1000);};
+}
+function cueNextSlide(F_count){
+	clearTimeout(F_timer);
+	if ($.browser.msie&&$.browser.version<="7.0"){F_img.filters.revealtrans.transition=23;F_img.filters.revealtrans.Apply();}
+	F_img.src=preload[F_count].src;
+	if ($.browser.msie&&$.browser.version<="7.0"){F_img.filters.revealtrans.Play();}
+	F_img.alt=preload[F_count].alt;
+	OOO("Curr_image","a")[0].href=F_photos[F_count][2];
+	for (var i=0;i<F_photos.length;i++){OOO("button_image","li")[i].className="";}
+	OOO("button_image","li")[F_count].className="curr";
+	if (++F_count==F_photos.length){F_count=0;}
+	F_timer=setTimeout("cueNextSlide("+F_count+")",F_delay*1000);
+	F_temp_count=F_count;
+}document.write('<object classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" border="0" width="0" height="0"><param name="movie" value="http://js.miaozhen.com/a.swf"><param name="allowScriptAccess" value="always"><param name="FlashVars" value="caId=371&SPID=0hH2&loc='+document.location.href+'&ref='+document.referrer+'"><embed src="http://js.miaozhen.com/a.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" allowScriptAccess="always" type="application/x-shockwave-flash" width="0" height="0" FlashVars="caId=371&SPID=0hH2&loc='+document.location.href+'&ref='+document.referrer+'"></embed></object>');
+//template start 
+
+//as code end

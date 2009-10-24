@@ -1,0 +1,25 @@
+//argument start
+var d=document.getElementById("miaozhen7900");
+var Width=180;
+var Height=348;
+var isAutoMonitorClick=true;
+var linkUrl="http://g.miaozhen.com/r.gif?^k=376^p=0jA2^o=http://search.360buy.com/Search?keyword=wx1";
+var imgUrl="http://www.360buy.com/images/digital/pic/digital_c_2_4.jpg";
+document.write('<object classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" border="0" width="0" height="0"><param name="movie" value="http://js.miaozhen.com/a.swf"><param name="allowScriptAccess" value="always"><param name="FlashVars" value="caId=376&SPID=0jA2&loc='+document.location.href+'&ref='+document.referrer+'"><embed src="http://js.miaozhen.com/a.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" allowScriptAccess="always" type="application/x-shockwave-flash" width="0" height="0" FlashVars="caId=376&SPID=0jA2&loc='+document.location.href+'&ref='+document.referrer+'"></embed></object>');
+//template start 
+var ad="<a target=\"_blank\" href=\"" + linkUrl + "\"><img height=\"" + Height + "\" width=\"" + Width + "\" border=\"0\" src=\"" + imgUrl + "\"/></a>";
+if(isAutoMonitorClick){
+        var click='<div style="position: absolute; width: ' + Width + 'px; height: ' + Height + 'px; cursor: ';
+        click+='pointer; background-color: rgb(255, 255, 255); opacity: 0; filter:alpha(opacity=0);" ';
+        click+='onclick="javascript:window.open(\'' + linkUrl + '\',\'_blank\')"></div>';
+        ad=click+ad;
+}
+if(typeof(d)=="undefined"||d==null)
+{
+        document.write(ad);
+}
+else
+{
+        d.innerHTML=ad;
+}
+//as code end
