@@ -3,3 +3,8 @@ E:\SourceCode\NetShop_Solution\DataCache\bin\Debug\DataCache.pdb
 E:\SourceCode\NetShop_Solution\DataCache\obj\Debug\ResolveAssemblyReference.cache
 E:\SourceCode\NetShop_Solution\DataCache\obj\Debug\DataCache.dll
 E:\SourceCode\NetShop_Solution\DataCache\obj\Debug\DataCache.pdb
+D:\stevenfolder\NetShop_Solution\DataCache\bin\Debug\DataCache.dll
+D:\stevenfolder\NetShop_Solution\DataCache\bin\Debug\DataCache.pdb
+D:\stevenfolder\NetShop_Solution\DataCache\obj\Debug\ResolveAssemblyReference.cache
+D:\stevenfolder\NetShop_Solution\DataCache\obj\Debug\DataCache.dll
+D:\stevenfolder\NetShop_Solution\DataCache\obj\Debug\DataCache.pdb

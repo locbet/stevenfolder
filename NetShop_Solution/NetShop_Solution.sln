@@ -17,20 +17,52 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ComponentArt", "ComponentArt", "{79E816D9-6DB8-4601-AA85-FAD759819C94}"
 	ProjectSection(SolutionItems) = preProject
-		External\ComponentArt.Web.UI.dll = External\ComponentArt.Web.UI.dll
-		External\ComponentArt.Web.UI.xml = External\ComponentArt.Web.UI.xml
+		External\ComponentArt\ComponentArt.Web.UI.dll = External\ComponentArt\ComponentArt.Web.UI.dll
+		External\ComponentArt\ComponentArt.Web.UI.xml = External\ComponentArt\ComponentArt.Web.UI.xml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telerik", "Telerik", "{62A28A2E-C540-4746-8C4A-8D7936168C3A}"
 	ProjectSection(SolutionItems) = preProject
-		External\RadAjax.Net2.dll = External\RadAjax.Net2.dll
-		External\RadCalendar.Net2.dll = External\RadCalendar.Net2.dll
-		External\RadEditor.Net2.dll = External\RadEditor.Net2.dll
-		External\RadMenu.Net2.dll = External\RadMenu.Net2.dll
-		External\RadPanelbar.Net2.dll = External\RadPanelbar.Net2.dll
-		External\RadSplitter.Net2.dll = External\RadSplitter.Net2.dll
-		External\RadTabStrip.Net2.dll = External\RadTabStrip.Net2.dll
-		External\RadWindow.Net2.dll = External\RadWindow.Net2.dll
+		External\Telerik\DictionaryConfiguration.NET2.dll = External\Telerik\DictionaryConfiguration.NET2.dll
+		External\Telerik\RadAjax.Net2.dll = External\Telerik\RadAjax.Net2.dll
+		External\Telerik\RadAjax.Net2.xml = External\Telerik\RadAjax.Net2.xml
+		External\Telerik\RadCalendar.Net2.dll = External\Telerik\RadCalendar.Net2.dll
+		External\Telerik\RadCalendar.Net2.xml = External\Telerik\RadCalendar.Net2.xml
+		External\Telerik\RadChart.Net2.dll = External\Telerik\RadChart.Net2.dll
+		External\Telerik\RadChart.Net2.xml = External\Telerik\RadChart.Net2.xml
+		External\Telerik\RadComboBox.Net2.dll = External\Telerik\RadComboBox.Net2.dll
+		External\Telerik\RadComboBox.Net2.xml = External\Telerik\RadComboBox.Net2.xml
+		External\Telerik\RadDock.Net2.dll = External\Telerik\RadDock.Net2.dll
+		External\Telerik\RadDock.Net2.xml = External\Telerik\RadDock.Net2.xml
+		External\Telerik\RadEditor.Net2.dll = External\Telerik\RadEditor.Net2.dll
+		External\Telerik\RadEditor.Net2.xml = External\Telerik\RadEditor.Net2.xml
+		External\Telerik\RadGrid.Net2.dll = External\Telerik\RadGrid.Net2.dll
+		External\Telerik\RadGrid.Net2.xml = External\Telerik\RadGrid.Net2.xml
+		External\Telerik\RadInput.Net2.dll = External\Telerik\RadInput.Net2.dll
+		External\Telerik\RadInput.Net2.xml = External\Telerik\RadInput.Net2.xml
+		External\Telerik\RadMenu.Net2.dll = External\Telerik\RadMenu.Net2.dll
+		External\Telerik\RadMenu.Net2.xml = External\Telerik\RadMenu.Net2.xml
+		External\Telerik\RadPanelbar.Net2.dll = External\Telerik\RadPanelbar.Net2.dll
+		External\Telerik\RadPanelbar.Net2.xml = External\Telerik\RadPanelbar.Net2.xml
+		External\Telerik\RadRotator.Net2.dll = External\Telerik\RadRotator.Net2.dll
+		External\Telerik\RadRotator.Net2.xml = External\Telerik\RadRotator.Net2.xml
+		External\Telerik\RadSpell.NET2.dll = External\Telerik\RadSpell.NET2.dll
+		External\Telerik\RadSpell.NET2.xml = External\Telerik\RadSpell.NET2.xml
+		External\Telerik\RadSplitter.Net2.dll = External\Telerik\RadSplitter.Net2.dll
+		External\Telerik\RadSplitter.Net2.xml = External\Telerik\RadSplitter.Net2.xml
+		External\Telerik\RadTabStrip.Net2.dll = External\Telerik\RadTabStrip.Net2.dll
+		External\Telerik\RadTabStrip.Net2.xml = External\Telerik\RadTabStrip.Net2.xml
+		External\Telerik\RadToolbar.Net2.dll = External\Telerik\RadToolbar.Net2.dll
+		External\Telerik\RadToolbar.Net2.xml = External\Telerik\RadToolbar.Net2.xml
+		External\Telerik\RadTreeView.Net2.dll = External\Telerik\RadTreeView.Net2.dll
+		External\Telerik\RadTreeView.Net2.xml = External\Telerik\RadTreeView.Net2.xml
+		External\Telerik\RadUpload.Net2.dll = External\Telerik\RadUpload.Net2.dll
+		External\Telerik\RadUpload.Net2.xml = External\Telerik\RadUpload.Net2.xml
+		External\Telerik\RadWindow.Net2.dll = External\Telerik\RadWindow.Net2.dll
+		External\Telerik\RadWindow.Net2.xml = External\Telerik\RadWindow.Net2.xml
+		External\Telerik\SessionDataSource.dll = External\Telerik\SessionDataSource.dll
+		External\Telerik\System.Web.Extensions.dll = External\Telerik\System.Web.Extensions.dll
+		External\Telerik\Telerik.QuickStart.dll = External\Telerik\Telerik.QuickStart.dll
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopWeb", "ShopWeb\ShopWeb.csproj", "{0163805E-BC21-4004-8E33-B2DC9CAF9303}"
@@ -39,12 +71,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopAdmin", "ShopAdmin\Shop
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control", "Control\Control.csproj", "{F23CBB01-3D09-436F-A549-611DF6A01F9C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Log", "Log", "{3D48D7C2-8528-4F8E-A39B-8ECB2ABF97C4}"
-	ProjectSection(SolutionItems) = preProject
-		External\log4net.dll = External\log4net.dll
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCache", "DataCache\DataCache.csproj", "{C6B98F9C-EF7C-4DC1-A1F3-8994C6754C94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Log4Net", "Log4Net", "{3CFA705F-825A-47B9-A2C7-351150C7A144}"
+	ProjectSection(SolutionItems) = preProject
+		External\Log4Net\log4net.dll = External\Log4Net\log4net.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,7 +123,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{79E816D9-6DB8-4601-AA85-FAD759819C94} = {31F41457-B83B-424E-98EA-4C7768B3B91B}
 		{62A28A2E-C540-4746-8C4A-8D7936168C3A} = {31F41457-B83B-424E-98EA-4C7768B3B91B}
-		{3D48D7C2-8528-4F8E-A39B-8ECB2ABF97C4} = {31F41457-B83B-424E-98EA-4C7768B3B91B}
+		{3CFA705F-825A-47B9-A2C7-351150C7A144} = {31F41457-B83B-424E-98EA-4C7768B3B91B}
 		{BC8A01C4-E838-4228-9F40-242590BF8EAE} = {59144EA3-31FC-4B5F-A9EB-9F09DDBD5CE0}
 		{1105DA74-EE87-4861-89C7-24E07F3C2F7F} = {59144EA3-31FC-4B5F-A9EB-9F09DDBD5CE0}
 		{FD5A4D25-540B-4652-A79F-14010C94498F} = {59144EA3-31FC-4B5F-A9EB-9F09DDBD5CE0}

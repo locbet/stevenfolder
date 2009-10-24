@@ -1,0 +1,5 @@
+//argument start
+if (Swidth>=1280){document.write("<a href=\"http://market.360buy.com/hd/yanbao090702/ind.html\" target=_blank><img src=\"http://www.360buy.com/images/digital/pic/digital_w_tonglan_01.jpg\" height=\"70\"/></a>");}else{document.write("<a href=\"http://market.360buy.com/hd/yanbao090702/ind.html\" target=_blank><img src=\"http://www.360buy.com/images/digital/pic/digital_tonglan_01.jpg\" height=\"70\"/></a>");}document.write('<object classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" border="0" width="0" height="0"><param name="movie" value="http://js.miaozhen.com/a.swf"><param name="allowScriptAccess" value="always"><param name="FlashVars" value="caId=372&SPID=0hK2&loc='+document.location.href+'&ref='+document.referrer+'"><embed src="http://js.miaozhen.com/a.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" allowScriptAccess="always" type="application/x-shockwave-flash" width="0" height="0" FlashVars="caId=372&SPID=0hK2&loc='+document.location.href+'&ref='+document.referrer+'"></embed></object>');
+//template start 
+
+//as code end
