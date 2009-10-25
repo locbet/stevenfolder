@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project SchemaVersion="1" ProjectGuid="{FCC333B6-0789-4f40-A43B-851DB236E860}">
+  <Database CodeName="NetShop" Schema="dbo">
+    <Connection>Provider=SQLNCLI.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=NetShop;Data Source=.\sqlexpress</Connection>
+    <Properties>
+      <Property Name="dbtiernamespace" Value="Entity" />
+      <Property Name="dbengine" Value="MSSQL" />
+      <Property Name="templateid" Value="TwoLKit.StandardCSharp" />
+      <Property Name="webuitiernamespace" Value="Entity.WebUI" />
+      <Property Name="baseoutputdirectory" Value="C:\NetShop" />
+      <Property Name="generatewinui" Value="False" />
+      <Property Name="winuitiernamespace" Value="Entity.WinUI" />
+      <Property Name="generateoldnewdirs" Value="True" />
+      <Property Name="copyright" Value="All rights reserved." />
+      <Property Name="targetide" Value="VSNET2003" />
+      <Property Name="generatesqlidentity" Value="True" />
+    </Properties>
+    <Tables>
+      <Table Name="AutoNum" CodeName="AutoNum" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="KeyID" CodeName="KeyID" DisplayName="KeyID" />
+          <Column Name="Seed" CodeName="Seed" DisplayName="Seed" />
+          <Column Name="SeedDate" CodeName="SeedDate" DisplayName="SeedDate" />
+          <Column Name="Prefix" CodeName="Prefix" DisplayName="Prefix" />
+          <Column Name="Summary" CodeName="Summary" DisplayName="Summary" />
+        </Columns>
+      </Table>
+      <Table Name="sysdiagrams" CodeName="sysdiagrams" Active="false" Updatable="true">
+        <Columns>
+          <Column Name="name" CodeName="Name" DisplayName="name" />
+          <Column Name="principal_id" CodeName="Principal_id" DisplayName="principal_id" />
+          <Column Name="diagram_id" CodeName="Diagram_id" DisplayName="diagram_id" />
+          <Column Name="version" CodeName="Version" DisplayName="version" />
+          <Column Name="definition" CodeName="Definition" DisplayName="definition" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_Brand" CodeName="Tbl_Brand" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="ID" CodeName="ID" DisplayName="ID" />
+          <Column Name="CateID" CodeName="CateID" DisplayName="CateID" />
+          <Column Name="NickName" CodeName="NickName" DisplayName="NickName" />
+          <Column Name="BrandName" CodeName="BrandName" DisplayName="BrandName" />
+          <Column Name="OrderID" CodeName="OrderID" DisplayName="OrderID" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_Category" CodeName="Tbl_Category" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="ID" CodeName="ID" DisplayName="ID" />
+          <Column Name="CateName" CodeName="CateName" DisplayName="CateName" />
+          <Column Name="ParentID" CodeName="ParentID" DisplayName="ParentID" />
+          <Column Name="LevelID" CodeName="LevelID" DisplayName="LevelID" />
+          <Column Name="OrderID" CodeName="OrderID" DisplayName="OrderID" />
+          <Column Name="FullPath" CodeName="FullPath" DisplayName="FullPath" />
+          <Column Name="PageUrl" CodeName="PageUrl" DisplayName="PageUrl" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_Customer" CodeName="Tbl_Customer" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="CustomerNO" CodeName="CustomerNO" DisplayName="CustomerNO" />
+          <Column Name="Email" CodeName="Email" DisplayName="Email" />
+          <Column Name="Password" CodeName="Password" DisplayName="Password" />
+          <Column Name="NickName" CodeName="NickName" DisplayName="NickName" />
+          <Column Name="Telephone" CodeName="Telephone" DisplayName="Telephone" />
+          <Column Name="Mobile" CodeName="Mobile" DisplayName="Mobile" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_HotKeyWord" CodeName="Tbl_HotKeyWord" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="KeyWord" CodeName="KeyWord" DisplayName="KeyWord" />
+          <Column Name="CateID" CodeName="CateID" DisplayName="CateID" />
+          <Column Name="OrderID" CodeName="OrderID" DisplayName="OrderID" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_PriceLevel" CodeName="Tbl_PriceLevel" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="ID" CodeName="ID" DisplayName="ID" />
+          <Column Name="CateID" CodeName="CateID" DisplayName="CateID" />
+          <Column Name="NickName" CodeName="NickName" DisplayName="NickName" />
+          <Column Name="StartPrice" CodeName="StartPrice" DisplayName="StartPrice" />
+          <Column Name="EndPrice" CodeName="EndPrice" DisplayName="EndPrice" />
+          <Column Name="OrderID" CodeName="OrderID" DisplayName="OrderID" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_Product" CodeName="Tbl_Product" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="ProductNO" CodeName="ProductNO" DisplayName="ProductNO" />
+          <Column Name="CateIDPath" CodeName="CateIDPath" DisplayName="CateIDPath" />
+          <Column Name="NickName" CodeName="NickName" DisplayName="NickName" />
+          <Column Name="ProductName" CodeName="ProductName" DisplayName="ProductName" />
+          <Column Name="MarketPrice" CodeName="MarketPrice" DisplayName="MarketPrice" />
+          <Column Name="InnerPrice" CodeName="InnerPrice" DisplayName="InnerPrice" />
+          <Column Name="BrandID" CodeName="BrandID" DisplayName="BrandID" />
+          <Column Name="BrandName" CodeName="BrandName" DisplayName="BrandName" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_ProductAnswer" CodeName="Tbl_ProductAnswer" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="ID" CodeName="ID" DisplayName="ID" />
+          <Column Name="ProductNO" CodeName="ProductNO" DisplayName="ProductNO" />
+          <Column Name="ServiceType" CodeName="ServiceType" DisplayName="ServiceType" />
+          <Column Name="Ask" CodeName="Ask" DisplayName="Ask" />
+          <Column Name="Answer" CodeName="Answer" DisplayName="Answer" />
+          <Column Name="YesCount" CodeName="YesCount" DisplayName="YesCount" />
+          <Column Name="NoCount" CodeName="NoCount" DisplayName="NoCount" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_ProductAttr" CodeName="Tbl_ProductAttr" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="AttrID" CodeName="AttrID" DisplayName="AttrID" />
+          <Column Name="CateID" CodeName="CateID" DisplayName="CateID" />
+          <Column Name="AttrName" CodeName="AttrName" DisplayName="AttrName" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_ProductAttrValue" CodeName="Tbl_ProductAttrValue" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="ProID" CodeName="ProID" DisplayName="ProID" />
+          <Column Name="AttrID" CodeName="AttrID" DisplayName="AttrID" />
+          <Column Name="AttrValue" CodeName="AttrValue" DisplayName="AttrValue" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_ProductComment" CodeName="Tbl_ProductComment" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="ID" CodeName="ID" DisplayName="ID" />
+          <Column Name="ProductNO" CodeName="ProductNO" DisplayName="ProductNO" />
+          <Column Name="Title" CodeName="Title" DisplayName="Title" />
+          <Column Name="Merits" CodeName="Merits" DisplayName="Merits" />
+          <Column Name="Demerits" CodeName="Demerits" DisplayName="Demerits" />
+          <Column Name="Summary" CodeName="Summary" DisplayName="Summary" />
+          <Column Name="Star" CodeName="Star" DisplayName="Star" />
+          <Column Name="ReplyCount" CodeName="ReplyCount" DisplayName="ReplyCount" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_ProductCommentReply" CodeName="Tbl_ProductCommentReply" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="ID" CodeName="ID" DisplayName="ID" />
+          <Column Name="CommentID" CodeName="CommentID" DisplayName="CommentID" />
+          <Column Name="Summary" CodeName="Summary" DisplayName="Summary" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_ProductEx" CodeName="Tbl_ProductEx" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="ProductNO" CodeName="ProductNO" DisplayName="ProductNO" />
+          <Column Name="Intro" CodeName="Intro" DisplayName="Intro" />
+          <Column Name="Standards" CodeName="Standards" DisplayName="Standards" />
+          <Column Name="Packing" CodeName="Packing" DisplayName="Packing" />
+          <Column Name="Service" CodeName="Service" DisplayName="Service" />
+        </Columns>
+      </Table>
+      <Table Name="Tbl_ProductPic" CodeName="Tbl_ProductPic" Active="true" Updatable="true">
+        <Columns>
+          <Column Name="ID" CodeName="ID" DisplayName="ID" />
+          <Column Name="OrderID" CodeName="OrderID" DisplayName="OrderID" />
+          <Column Name="ProductNO" CodeName="ProductNO" DisplayName="ProductNO" />
+          <Column Name="SmallPic" CodeName="SmallPic" DisplayName="SmallPic" />
+          <Column Name="MidPic" CodeName="MidPic" DisplayName="MidPic" />
+          <Column Name="BigPic" CodeName="BigPic" DisplayName="BigPic" />
+        </Columns>
+      </Table>
+    </Tables>
+    <Procedures>
+      <Procedure Name="fn_diagramobjects" CodeName="fn_diagramobjects" Active="true">
+        <Parameters />
+      </Procedure>
+      <Procedure Name="sp_alterdiagram" CodeName="sp_alterdiagram" Active="false">
+        <Parameters>
+          <Parameter Name="@diagramname" CodeName="diagramname" />
+          <Parameter Name="@owner_id" CodeName="owner_id" />
+          <Parameter Name="@version" CodeName="version" />
+          <Parameter Name="@definition" CodeName="definition" />
+        </Parameters>
+      </Procedure>
+      <Procedure Name="sp_creatediagram" CodeName="sp_creatediagram" Active="false">
+        <Parameters>
+          <Parameter Name="@diagramname" CodeName="diagramname" />
+          <Parameter Name="@owner_id" CodeName="owner_id" />
+          <Parameter Name="@version" CodeName="version" />
+          <Parameter Name="@definition" CodeName="definition" />
+        </Parameters>
+      </Procedure>
+      <Procedure Name="sp_dropdiagram" CodeName="sp_dropdiagram" Active="false">
+        <Parameters>
+          <Parameter Name="@diagramname" CodeName="diagramname" />
+          <Parameter Name="@owner_id" CodeName="owner_id" />
+        </Parameters>
+      </Procedure>
+      <Procedure Name="sp_GetAutoNum" CodeName="sp_GetAutoNum" Active="false">
+        <Parameters>
+          <Parameter Name="@keyid" CodeName="keyid" />
+        </Parameters>
+      </Procedure>
+      <Procedure Name="sp_helpdiagramdefinition" CodeName="sp_helpdiagramdefinition" Active="false">
+        <Parameters>
+          <Parameter Name="@diagramname" CodeName="diagramname" />
+          <Parameter Name="@owner_id" CodeName="owner_id" />
+        </Parameters>
+      </Procedure>
+      <Procedure Name="sp_helpdiagrams" CodeName="sp_helpdiagrams" Active="false">
+        <Parameters>
+          <Parameter Name="@diagramname" CodeName="diagramname" />
+          <Parameter Name="@owner_id" CodeName="owner_id" />
+        </Parameters>
+      </Procedure>
+      <Procedure Name="sp_renamediagram" CodeName="sp_renamediagram" Active="false">
+        <Parameters>
+          <Parameter Name="@diagramname" CodeName="diagramname" />
+          <Parameter Name="@owner_id" CodeName="owner_id" />
+          <Parameter Name="@new_diagramname" CodeName="new_diagramname" />
+        </Parameters>
+      </Procedure>
+      <Procedure Name="sp_upgraddiagrams" CodeName="sp_upgraddiagrams" Active="false">
+        <Parameters />
+      </Procedure>
+    </Procedures>
+  </Database>
+</Project>

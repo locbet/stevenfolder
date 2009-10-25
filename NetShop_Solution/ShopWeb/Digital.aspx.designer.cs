@@ -23,12 +23,12 @@ namespace ShopWeb {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// CtlSubCategory1 control.
+        /// CtlCategory1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ShopWeb.Controls.CtlSubCategory CtlSubCategory1;
+        protected global::ShopWeb.Controls.CtlCategory CtlCategory1;
     }
 }

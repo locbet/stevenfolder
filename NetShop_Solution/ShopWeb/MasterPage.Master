@@ -53,23 +53,8 @@
             <div class="head_box2_right">
             </div>
             <div id="HotKeyword">
-                <strong>热门搜索：</strong><a href="http://search.360buy.com/Search?keyword=%D2%C6%B6%AF%D3%B2%C5%CC"
-                    target="_blank">移动硬盘</a><a href="http://search.360buy.com/Search?keyword=6010&cid=655"
-                        target="_blank">夏普6010</a><a href="http://search.360buy.com/Search?keyword=%BC%D1%C4%DC%CF%E0%BB%FA"
-                            target="_blank">佳能相机</a><a href="http://search.360buy.com/Search?keyword=%B5%E7%B7%E7%C9%C8"
-                                target="_blank">电风扇</a><a href="http://search.360buy.com/Search?keyword=U%C5%CC&cid=694"
-                                    target="_blank">U盘</a><a href="http://search.360buy.com/Search?keyword=%CD%BC%C0%BC%B6%E4"
-                                        target="_blank">图兰朵</a><a href="http://search.360buy.com/Search?keyword=%CC%EA%D0%EB%B5%B6"
-                                            target="_blank">剃须刀</a><a href="http://search.360buy.com/Search?keyword=%C8%F0%CA%BF%B1%ED"
-                                                target="_blank">瑞士表店</a><a href="http://search.360buy.com/Search?keyword=%C9%AD%BA%A3%C8%FB%B6%FB"
-                                                    target="_blank">森海塞尔</a><a href="http://search.360buy.com/Search?keyword=%CD%E0"
-                                                        target="_blank">袜子</a><a href="http://search.360buy.com/Search?keyword=N97" target="_blank">N97</a><a
-                                                            href="http://search.360buy.com/Search?keyword=%C9%CF%CD%F8%B1%BE" target="_blank">上网本</a><a
-                                                                href="http://search.360buy.com/Search?keyword=%C0%D6%BF%DB%C0%D6%BF%DB" target="_blank">乐扣</a><a
-                                                                    href="http://search.360buy.com/Search?keyword=%CE%FC%D3%CD%D1%CC%BB%FA&s=889&sname=%CE%FC%D3%CD%D1%CC%BB%FA&vm=true&sv=2"
-                                                                    target="_blank">吸油烟机</a><a href="http://search.360buy.com/Search?keyword=%BD%DC%CA%BF%B0%EE%B0%B2%C8%AB%CC%D7"
-                                                                        target="_blank">杰士邦安全套</a><a href="http://search.360buy.com/Search?keyword=3G%CE%DE%CF%DF%C9%CF%CD%F8%BF%A8"
-                                                                            target="_blank">3G无线上网</a>
+                <strong>热门搜索：</strong>
+                <asp:Literal ID="litKeyWords" runat="server"></asp:Literal>
             </div>
             <ul id="Search">
                 <li><strong>商品搜索：</strong></li>
