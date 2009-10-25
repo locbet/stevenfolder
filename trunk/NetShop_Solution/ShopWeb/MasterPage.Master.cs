@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Business;
+using System.Text;
 
 namespace ShopWeb
 {
@@ -17,9 +18,30 @@ namespace ShopWeb
         }
         private void InitPageData()
         {
-           List<string> lst_hotkeyword= HotKeyWordBLL.GetHotKeyWords();
+            List<string> lst_hotkeyword = HotKeyWordBLL.GetHotKeyWords();
 
-           this.litKeyWords.Text = "";
+            StringBuilder sb = new StringBuilder();
+            foreach (string item in lst_hotkeyword)
+            {
+                sb.AppendFormat("<a href=\"Search.aspx?keyword={0}\">{1}</a>", HttpUtility.UrlEncode(item), item);
+            }
+            this.litKeyWords.Text = sb.ToString();
+
+        }
+        public string KeyWord
+        {
+            get
+            {
+                string _keyword=Request.QueryString["keyword"];
+                if (!string.IsNullOrEmpty(_keyword))
+                {
+                    return _keyword;
+                }
+                else
+                {
+                    return "E66";
+                }
+            }
         }
     }
 }
