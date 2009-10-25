@@ -8,7 +8,7 @@ namespace ShopWeb._WebUI
 {
     public abstract class BasePage : System.Web.UI.Page
     {
-        protected static readonly ILog Log = LogManager.GetLogger(typeof(BasePage));
+        //protected static readonly ILog Log = LogManager.GetLogger(typeof(BasePage));
 
         public BasePage()
         {
