@@ -45,22 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoNumBLL.cs" />
     <Compile Include="BrandBLL.cs" />
     <Compile Include="CategoryBLL.cs" />
-    <Compile Include="DAL\AutoNumDAL.cs" />
-    <Compile Include="DAL\BrandDAL.cs" />
-    <Compile Include="DAL\CategoryDAL.cs" />
     <Compile Include="CustomerBLL.cs" />
-    <Compile Include="DAL\CustomerDAL.cs" />
-    <Compile Include="DAL\PriceLevelDAL.cs" />
-    <Compile Include="DAL\ProductAnswerDAL.cs" />
-    <Compile Include="DAL\ProductAttrDAL.cs" />
-    <Compile Include="DAL\ProductAttrValueDAL.cs" />
-    <Compile Include="DAL\ProductCommentDAL.cs" />
-    <Compile Include="DAL\ProductCommentReplyDAL.cs" />
-    <Compile Include="DAL\ProductDAL.cs" />
-    <Compile Include="DAL\ProductExDAL.cs" />
-    <Compile Include="DAL\ProductPicDAL.cs" />
+    <Compile Include="HotKeyWordBLL.cs" />
     <Compile Include="PriceLevelBLL.cs" />
     <Compile Include="ProductAnswerBLL.cs" />
     <Compile Include="ProductAttrBLL.cs" />

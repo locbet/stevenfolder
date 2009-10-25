@@ -49,6 +49,7 @@
     <Compile Include="BrandInfo.cs" />
     <Compile Include="CategoryInfo.cs" />
     <Compile Include="CustomerInfo.cs" />
+    <Compile Include="HotKeyWordInfo.cs" />
     <Compile Include="PriceLevelInfo.cs" />
     <Compile Include="ProductAnswerInfo.cs" />
     <Compile Include="ProductAttrInfo.cs" />

@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Entity;
-using DataCore;
 using System.Data;
+using DataCore;
 
-namespace Business.DAL
+namespace Business
 {
-    public class AutoNumDAL
+    public class AutoNumBLL
     {
         #region static method
 

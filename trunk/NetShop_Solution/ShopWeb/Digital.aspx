@@ -2,21 +2,20 @@
     MasterPageFile="~/MasterPage.Master" AutoEventWireup="false" CodeBehind="Digital.aspx.cs"
     Inherits="ShopWeb.Digital" %>
 
-<%@ Register Src="Controls/CtlSubCategory.ascx" TagName="CtlSubCategory" TagPrefix="uc1" %>
+<%@ Register Src="Controls/CtlCategory.ascx" TagName="CtlCategory" TagPrefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta name="description" content="京东商城-专业的数码网上购物商城,产品包括数码、家电、手机、电脑配件、网络产品等数万种商品直销,便捷，诚信的服务,为您提供愉悦的网上商城购物体验!" />
     <meta name="Keywords" content="手机，数码相机，单反相机，MP3/MP4，摄像机，配件，电池，充电器，耳机，存储卡，网上购物，网上商城，京东商城" />
-    <link href="css/digital.css" rel="stylesheet" type="text/css" />
+    <link href="css/default.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
     <form id="form1" runat="server">
     <div class="Main">
         <div class="left">
-            <uc1:CtlSubCategory ID="CtlSubCategory1" runat="server" />
+            <uc1:CtlCategory ID="CtlCategory1" runat="server" />
         </div>
         <div class="right">
-            <div class="right_box_l">
-                <!--[if !ie]>焦点图片开始<![endif]-->
+            <div class="right_box1_left">
                 <div id="Focus_Img">
                     <div id="Curr_image">
                         <div id="miaozhen7897">
@@ -26,11 +25,6 @@
 
                     </div>
                 </div>
-
-                <script type="text/javascript">                    strartSlideshow();</script>
-
-                <!--[if !ie]>焦点图片结束<![endif]-->
-                <!--[if !IE]>疯狂抢购开始<![endif]-->
                 <div class="promotion">
                     <h2>
                         <img alt="疯狂抢购" src="手机数码-京东商城-手机%20数码%20单反相机%20MP3-MP4%20摄像机%20配件%20电池%20充电器%20耳机%20存储卡_files/digital_fkqg.jpg"></h2>
@@ -73,9 +67,8 @@
                         </ul>
                     </div>
                 </div>
-                <!--[if !IE]>疯狂抢购结束<![endif]-->
             </div>
-            <div class="right_box_r">
+            <div class="right_box1_right">
                 <div id="Report">
                     <h2>
                         手机数码活动专场</h2>
@@ -163,9 +156,6 @@
             <div class="AD_R_1 margin_b6">
                 <div id="miaozhen7898">
                 </div>
-
-                <script type="text/javascript" src="手机数码-京东商城-手机%20数码%20单反相机%20MP3-MP4%20摄像机%20配件%20电池%20充电器%20耳机%20存储卡_files/a(1).gif"></script>
-
             </div>
             <!--[if !IE]>手机开始<![endif]-->
             <div class="Special">

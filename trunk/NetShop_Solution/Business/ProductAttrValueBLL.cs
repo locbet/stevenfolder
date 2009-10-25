@@ -5,11 +5,11 @@ using System.Text;
 using Entity;
 using DataCore;
 using System.Data;
-using Business.DAL;
+
 
 namespace Business
 {
-    public class ProductAttrValueBLL:ProductAttrValueDAL
+    public class ProductAttrValueBLL
     {
        
     }
