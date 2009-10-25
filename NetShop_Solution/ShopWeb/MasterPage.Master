@@ -60,7 +60,8 @@
                 <li><strong>商品搜索：</strong></li>
                 <li class="S_input">
                     <input onkeydown="javascript:if(event.keyCode==13) search('keyword');" id="keyword"
-                        class="S_input1" onclick="this.value='';this.style.color='#444444'" value="ThinkPad X200"
+                        class="S_input1" onclick="this.value='';this.style.color='#444444'" 
+                        value="<%=KeyWord %>"                        
                         autocomplete="off"/>
                     <div id="Se_tip">
                     </div>
