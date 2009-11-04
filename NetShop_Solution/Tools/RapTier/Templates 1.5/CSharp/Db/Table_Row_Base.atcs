@@ -30,11 +30,7 @@ namespace <#= GetNamespace() #>
 	{
 <#		foreach(IColumn column in Table.Columns)
 		{ ##>
-		private <#= GetDotNetTypeName(column)#> <#= GetFieldName(column) #>;
-<#		if(ShouldGenerateNullableProperty(column))
-		{ ##>
-		private bool <#= GetFieldName(column) #>Null = true;
-<#		} ##>
+		private <#= GetDotNetTypeName(column)#><#= ShouldGenerateNullableProperty(column)?"?":"" #> <#= GetFieldName(column) #>;
 <#		} ##>
 
 		/// <summary>
@@ -56,43 +52,11 @@ namespace <#= GetNamespace() #>
 <#			} ##>		
 		/// </summary>
 		/// <value>The <c><#= column.Name #></c> column value.</value>
-		public <#= GetDotNetTypeName(column)#> <#= GetPropertyName(column) #>
+		public <#= GetDotNetTypeName(column)#><#= ShouldGenerateNullableProperty(column)?"?":"" #> <#= GetPropertyName(column) #>
 		{
-<#			if(ShouldGenerateNullableProperty(column))
-			{ ##>
-			get
-			{
-				if(Is<#= GetPropertyName(column) #>Null)
-					throw new InvalidOperationException("Cannot get value because it is DBNull.");
-				return <#= GetFieldName(column) #>;
-			}
-			set
-			{
-				<#= GetFieldName(column) #>Null = false;
-				<#= GetFieldName(column) #> = value;
-			}
-<#			}
-			else
-			{ ##>
 			get { return <#= GetFieldName(column) #>; }
 			set { <#= GetFieldName(column) #> = value; }
-<#			} ##>
 		}
-<#		if(ShouldGenerateNullableProperty(column))
-		{ ##>
-
-		/// <summary>
-		/// Indicates whether the <see cref="<#= GetPropertyName(column) #>"/>
-		/// property value is null.
-		/// </summary>
-		/// <value>true if the property value is null, otherwise false.</value>
-		public bool Is<#= GetPropertyName(column) #>Null
-		{
-			get { return <#= GetFieldName(column) #>Null; }
-			set { <#= GetFieldName(column) #>Null = value; }
-		}
-<#		}	// end if column.Nullable ##>
-
 <#		} ##>
 		/// <summary>
 		/// Returns <#= GetClassName() #> of this instance.
