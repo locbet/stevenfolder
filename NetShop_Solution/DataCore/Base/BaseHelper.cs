@@ -13,7 +13,7 @@ namespace DataCore.Base
     /// <summary>
     /// 数据库操作基类
     /// </summary>
-    public class BaseHelper : IDisposable
+    public abstract class BaseHelper : IDisposable
     {
         private AbsConnString _connString;
         private IDbConnection _dbconnection;

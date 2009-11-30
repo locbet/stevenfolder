@@ -1,16 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Entity;
-using DataCore;
+using System;
 using System.Data;
+using System.Text;
+using DataCore;
+using Entity;
 
 
 namespace Business
 {
-    public class ProductAttrValueBLL
-    {
-       
-    }
+	/// <summary>
+	/// Class:ProductAttrValue
+	/// Author:Steven
+    /// Create:2009/11/29 11:32:28
+	/// </summary>
+	public class ProductAttrValueBLL:_Base.ProductAttrValueBase
+	{		
+        /// <summary>
+        /// 
+        /// </summary>
+		public ProductAttrValueBLL()
+		{
+		}   
+	}
 }

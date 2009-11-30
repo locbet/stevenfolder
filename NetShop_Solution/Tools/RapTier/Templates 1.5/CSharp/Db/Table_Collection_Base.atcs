@@ -10,7 +10,7 @@
 //			Do not change this source code manually. Changes to this file may 
 //			cause incorrect behavior and will be lost if the code is regenerated.
 //		</remarks>
-//		<generator rewritefile="<#= RewriteExistingFile #>" infourl="http://www.SharpPower.com">RapTier</generator>
+//		<generator rewritefile="<#= RewriteExistingFile #>">Steven</generator>
 // </fileinfo>
 
 using System;
@@ -1139,12 +1139,12 @@ using SharpPower.DbDom;
 
 	public override string RelativeFilePath
 	{
-		get { return SharedUtils.GetBaseClassRelativePath(GetClassName() + ".cs"); }
+		get { return SharedUtils.GetBaseClassRelativePath("Bussiness_Base\\" + GetClassName() + ".cs"); }
 	}
 	
 	private string GetClassName()
 	{
-		return GetTableClassName(Table) + "_Base";
+		return  Table.CodeName + "_Base";
 	}
 	
 	private string GetUserClassName()

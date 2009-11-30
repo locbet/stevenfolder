@@ -100,7 +100,7 @@ using SharpPower.DbDom;
 
 	public override string RelativeFilePath
 	{
-		get { return SharedUtils.GetBaseClassRelativePath("Entity\\" + GetClassName() + ".cs"); }
+		get { return SharedUtils.GetBaseClassRelativePath("Entity_Base\\" + GetClassName() + ".cs"); }
 	}
 
 	private string GetClassName()
@@ -148,7 +148,7 @@ using SharpPower.DbDom;
 	}
 	private string GetColumnIndexVariableName(IColumn column)
 	{
-		return SharedUtils.GetParameterName(column.CodeName, false) + "ColumnIndex";
+		return SharedUtils.GetParameterName(column.CodeName, false) + "ColIndex";
 	}
     private string GetReaderCode(IColumn column)
 	{

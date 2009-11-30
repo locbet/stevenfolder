@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using DataCore.Base;
 
 namespace DataCore
 {
@@ -9,6 +10,7 @@ namespace DataCore
     public class NetShopHelper : Base.BaseHelper
     {
         private static ConnString.NetShopConnString conn = new ConnString.NetShopConnString();
+
         public NetShopHelper()
             : base(conn)
         {
@@ -26,5 +28,12 @@ namespace DataCore
         {
             this.Close();
         }
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    public class NetShopStaticHelper : BaseStaticHelper<ConnString.NetShopConnString>
+    {
+
     }
 }

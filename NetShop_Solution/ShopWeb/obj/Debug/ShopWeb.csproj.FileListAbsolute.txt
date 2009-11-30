@@ -1,0 +1,12 @@
+E:\SourceCode\NetShop_Solution\ShopWeb\bin\ShopWeb.dll
+E:\SourceCode\NetShop_Solution\ShopWeb\bin\ShopWeb.pdb
+E:\SourceCode\NetShop_Solution\ShopWeb\bin\Business.dll
+E:\SourceCode\NetShop_Solution\ShopWeb\bin\log4net.dll
+E:\SourceCode\NetShop_Solution\ShopWeb\bin\DataCore.dll
+E:\SourceCode\NetShop_Solution\ShopWeb\bin\Entity.dll
+E:\SourceCode\NetShop_Solution\ShopWeb\bin\DataCore.pdb
+E:\SourceCode\NetShop_Solution\ShopWeb\bin\Entity.pdb
+E:\SourceCode\NetShop_Solution\ShopWeb\bin\Business.pdb
+E:\SourceCode\NetShop_Solution\ShopWeb\obj\Debug\ResolveAssemblyReference.cache
+E:\SourceCode\NetShop_Solution\ShopWeb\obj\Debug\ShopWeb.dll
+E:\SourceCode\NetShop_Solution\ShopWeb\obj\Debug\ShopWeb.pdb
