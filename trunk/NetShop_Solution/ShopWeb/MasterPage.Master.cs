@@ -18,7 +18,7 @@ namespace ShopWeb
         }
         private void InitPageData()
         {
-            List<string> lst_hotkeyword = HotKeyWordBLL.GetHotKeyWords();
+            List<string> lst_hotkeyword = new List<string>();//。 HotKeyWordBLL.GetHotKeyWords();
 
             StringBuilder sb = new StringBuilder();
             foreach (string item in lst_hotkeyword)

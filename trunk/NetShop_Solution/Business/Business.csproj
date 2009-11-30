@@ -45,7 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoNumBLL.cs" />
+    <Compile Include="AutoNum\AutoNumBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="BrandBLL.cs" />
     <Compile Include="CategoryBLL.cs" />
     <Compile Include="CustomerBLL.cs" />
@@ -60,6 +62,20 @@
     <Compile Include="ProductBLL.cs" />
     <Compile Include="ProductPicBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_Base\AutoNumBase.cs" />
+    <Compile Include="_Base\BrandBase.cs" />
+    <Compile Include="_Base\CategoryBase.cs" />
+    <Compile Include="_Base\CustomerBase.cs" />
+    <Compile Include="_Base\HotKeyWordBase.cs" />
+    <Compile Include="_Base\PriceLevelBase.cs" />
+    <Compile Include="_Base\ProductAnswerBase.cs" />
+    <Compile Include="_Base\ProductAttrBase.cs" />
+    <Compile Include="_Base\ProductAttrValueBase.cs" />
+    <Compile Include="_Base\ProductBase.cs" />
+    <Compile Include="_Base\ProductCommentBase.cs" />
+    <Compile Include="_Base\ProductCommentReplyBase.cs" />
+    <Compile Include="_Base\ProductExBase.cs" />
+    <Compile Include="_Base\ProductPicBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataCore\DataCore.csproj">

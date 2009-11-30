@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="SiteFrame.master.cs"
+    Inherits="ShopAdmin.SiteFrame" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="App_Themes/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="formMain" runat="server">
+    <div id="mainDiv">
+        <div id="topDiv">
+        <div style="font-size:25px; padding:10px; float:left;">后台管理系统</div>
+        <div style="float:right; padding:15px;"><%=DateTime.Now %></div>
+        </div>
+        <div id="middleDiv">
+            <div id="tree"><asp:TreeView ID="TreeView1" runat="server" EnableViewState="false">
+                <Nodes>
+                <asp:TreeNode Text="Root" Value="Root">
+                    <asp:TreeNode Text="New Node" Value="New Node"></asp:TreeNode>
+                    <asp:TreeNode Text="New Node" Value="New Node">
+                        <asp:TreeNode Text="New Node" Value="New Node"></asp:TreeNode>
+                    </asp:TreeNode>
+                    <asp:TreeNode Text="New Node" Value="New Node"></asp:TreeNode>
+                    <asp:TreeNode Text="New Node" Value="New Node">
+                        <asp:TreeNode Text="New Node" Value="New Node"></asp:TreeNode>
+                    </asp:TreeNode>
+                    <asp:TreeNode Text="New Node" Value="New Node"></asp:TreeNode>
+                    <asp:TreeNode Text="New Node" Value="New Node"></asp:TreeNode>
+                    <asp:TreeNode Text="New Node" Value="New Node"></asp:TreeNode>
+                    </asp:TreeNode>
+                </Nodes>            
+            </asp:TreeView></div>
+            <div id="BarDiv"></div>
+            <div id="contentDiv"><asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server"></asp:ContentPlaceHolder></div>
+        </div>
+        <div id="footerDiv"><span style="float:right;padding:7px;"> Power By Steven@Copy Right 2009</span></div>
+    </div>
+    </form>
+</body>
+</html>

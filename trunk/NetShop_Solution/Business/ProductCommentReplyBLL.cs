@@ -1,15 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Entity;
-using DataCore;
+using System;
 using System.Data;
+using System.Text;
+using DataCore;
+using Entity;
+
 
 namespace Business
 {
-    public class ProductCommentReplyBLL 
-    {
-       
-    }
+	/// <summary>
+	/// Class:ProductCommentReply
+	/// Author:Steven
+    /// Create:2009/11/29 11:32:28
+	/// </summary>
+	public class ProductCommentReplyBLL:_Base.ProductCommentReplyBase
+	{		
+        /// <summary>
+        /// 
+        /// </summary>
+		public ProductCommentReplyBLL()
+		{
+		}   
+	}
 }
